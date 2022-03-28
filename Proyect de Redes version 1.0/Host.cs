@@ -18,9 +18,9 @@ namespace Proyect_de_Redes_version_1._0
         public int CountTime { get; set; }
         public string Name { get; }
         public Port _Port { get; }
-        public void Send(List<int> info)
+        public void Send(string info)
         {
-            _Port.Send = info[CountTime];
+            _Port.Send = int.Parse(info[CountTime].ToString());
             _Port.Connection_Port.Receive = _Port.Send;
         }//metodo para enviar la informacion que se quiere hacia el puerto requerido
     }

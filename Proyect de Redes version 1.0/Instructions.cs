@@ -12,6 +12,8 @@ namespace Proyect_de_Redes_version_1._0
         {
             Instruction = instruction;
         }
+        public Dictionary<string,Port> NamePort { get; set; }
+        public Dictionary<string,Host> NameHost { get; set; }
         public string Instruction { get; }
         public static string[] Compress_List(string instruction)
         {
@@ -26,31 +28,30 @@ namespace Proyect_de_Redes_version_1._0
                 if (compress_list[2] == "host")
                 {
                     Host host = new Host(compress_list[3]);
+                    NameHost.Add(host.Name, host);
+                    NamePort.Add(host._Port.Name, host._Port);
                 }
                 if (compress_list[2] == "hub")
                 {
                     if (compress_list[4] == "8") numberports = 8;
                     Hub hub = new Hub(compress_list[3], numberports);
+                    foreach (var item in hub.Ports)
+                    {
+                        NamePort.Add(item.Name, item);
+                    }
                 }
             }
             if (compress_list[1] == "connect")
             {
-                compress_list[2]
+                NamePort[compress_list[2]].Connect(NamePort[compress_list[3]]);
             }
             if (compress_list[1] == "disconnect")
             {
-                Port port = new Port(compress_list[2]);
-                port.Disconnect();
+                NamePort[compress_list[2]].Disconnect();
             }
             if (compress_list[1] == "send")
             {
-                List<int> info = new List<int>();
-                Host host = new Host(compress_list[2]);
-                foreach (char item in compress_list[3])
-                {
-                    info.Add((int)item);
-                }
-                host.Send(info);
+                NameHost[compress_list[2]].Send(compress_list[3]);
             }
         }
     }

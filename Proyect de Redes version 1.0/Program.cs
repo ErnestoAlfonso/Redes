@@ -14,6 +14,8 @@ namespace Proyect_de_Redes_version_1._0
     {
         static void Main(string[] args)
         {
+            string a = "0";
+            Console.WriteLine(int.Parse(a)); 
             #region prueba
             //Stopwatch clock = new Stopwatch();
             //clock.Start();
