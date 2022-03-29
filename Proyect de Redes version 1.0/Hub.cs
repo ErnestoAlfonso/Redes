@@ -17,9 +17,12 @@ namespace Proyect_de_Redes_version_1._0
         {
             throw new NotImplementedException();
         }
-        public int Receive()
-        {
-            throw new NotImplementedException();
+        public void Receive(Port receivePort)
+        {//falta escribir el txt
+
+
+
         }
+    
     }
 }

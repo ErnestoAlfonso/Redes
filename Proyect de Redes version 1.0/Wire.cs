@@ -17,6 +17,14 @@ namespace Proyect_de_Redes_version_1._0
         public Port Port1 { get; }
         public Port Port2 { get; }
         
+        public Port ReceivePort(string name)
+        {
+            if (Port1.Name == name)
+                return Port2;
+            else
+                return Port1;
+        }
+            
         public int Value { get; set; }  
     }
 }

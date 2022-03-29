@@ -13,6 +13,7 @@ namespace Proyect_de_Redes_version_1._0
             Time = time;
             Inst_type = inst_type;
             Args = args;
+            NameLogicDevice = new Dictionary<string, LogicDevice>();  
         }
 
         public int Time { get; set; }

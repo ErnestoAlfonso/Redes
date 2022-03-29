@@ -9,19 +9,22 @@ namespace Proyect_de_Redes_version_1._0
 {
     class Host : LogicDevice, IActions
     {
-        public Host(string name): base(name,1)
+        public Host(string name) : base(name, 1)
         {
         }
         public int CountTime { get; set; }
+        public int CurrentBit { get; }
+
 
         public void Send(string info)
         {
-
+            Ports[0].Send(info[CurrentBit].ToString());
+            
         }//metodo para enviar la informacion que se quiere hacia el puerto requerido
-        public int Receive()
+        public void Receive(Port receivePort)
         {
-            return Ports[0]._Wire.Value;
+            throw new NotImplementedException();
         }
-
+        
     }
 }

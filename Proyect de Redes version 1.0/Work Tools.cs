@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    interface IActions
+    class Work_Tools
     {
-        void Send(string info);
-        void Receive(Port receivePort);   
+        public Work_Tools()
+        {
 
+        }
+        public void DFS()
+        {
+            
+        }
     }
 }
