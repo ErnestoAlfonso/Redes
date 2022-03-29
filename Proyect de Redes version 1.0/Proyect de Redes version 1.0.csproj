@@ -47,9 +47,9 @@
     <Compile Include="Host.cs" />
     <Compile Include="Hub.cs" />
     <Compile Include="IActions.cs" />
-    <Compile Include="Instructions.cs" />
-    <Compile Include="LoadAndSaveScripts.cs" />
+    <Compile Include="Instruction.cs" />
     <Compile Include="LogicDevice.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Port.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

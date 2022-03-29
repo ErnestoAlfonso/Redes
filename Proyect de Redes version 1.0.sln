@@ -5,12 +5,6 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyect de Redes version 1.0", "Proyect de Redes version 1.0\Proyect de Redes version 1.0.csproj", "{DC8619E7-369D-40B0-B7F1-44609E8C4AF5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CEDE66FF-F813-46AA-BD6A-B9FC2F8AA21E}"
-	ProjectSection(SolutionItems) = preProject
-		Proyect de Redes version 1.0\Interpreter\Instruction.cs = Proyect de Redes version 1.0\Interpreter\Instruction.cs
-		Proyect de Redes version 1.0\Interpreter\Parser.cs = Proyect de Redes version 1.0\Interpreter\Parser.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
