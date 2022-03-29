@@ -30,7 +30,9 @@ namespace Proyect_de_Redes_version_1._0
 
             try
             {
+               
                 return new Instruction(int.Parse(splitedLine[0]), splitedLine[1], CopyTo(splitedLine, 2, splitedLine.Length - 1));
+           
             }
             catch (Exception)
             {
@@ -39,17 +41,17 @@ namespace Proyect_de_Redes_version_1._0
             }
         }
 
-        public List<Instruction> ReadFile()
+        public Queue<Instruction> ReadFile()
         {
-            List<Instruction> instructions = new List<Instruction>();
+            Queue<Instruction> instructions = new Queue<Instruction>();
 
             string line = _file.ReadLine();
             while (line != null)
             {
-                instructions.Add(ParseLine(line));
+                instructions.Enqueue(ParseLine(line));
             }
 
-            return new List<Instruction>();
+            return instructions;
         }
     }
 }

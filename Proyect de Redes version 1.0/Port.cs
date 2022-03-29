@@ -26,7 +26,7 @@ namespace Proyect_de_Redes_version_1._0
             _Wire = null;
         }
 
-        public void Receive()
+        public void Receive(Port receivePort)
         {
             throw new NotImplementedException();
         }

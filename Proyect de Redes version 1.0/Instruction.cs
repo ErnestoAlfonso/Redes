@@ -15,14 +15,14 @@ namespace Proyect_de_Redes_version_1._0
             Args = args;
             NameLogicDevice = new Dictionary<string, LogicDevice>();  
         }
+        
 
         public int Time { get; set; }
         public string Inst_type { get; set; }
         public string[] Args { get; set; }
-
         public Dictionary<string, LogicDevice> NameLogicDevice { get; set; }
 
-        public void ExecuteInstruccion()
+        public void Execute()
         {
             if (Inst_type == "create")
             {
@@ -67,7 +67,6 @@ namespace Proyect_de_Redes_version_1._0
                     result += item;
             }
             return result;
-
 
         }
     }
