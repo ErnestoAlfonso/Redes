@@ -15,7 +15,6 @@ namespace Proyect_de_Redes_version_1._0
 
         public void Send(string bit)
         {
-            throw new NotImplementedException();
         }
         public void Receive(Port receivePort)
         {//falta escribir el txt
