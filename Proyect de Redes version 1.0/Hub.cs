@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    class Hub
+    class Hub : LogicDevice, IActions
     {
-        public Hub(string name, int NumberOfPorts)
+        public Hub(string name, int numberOfPorts) : base(name, numberOfPorts)
         {
-            Name = name;
-            Ports = new Port[NumberOfPorts];
-            for (int i = 0; i < NumberOfPorts; i++)
-                Ports[i] = new Port(name + "_" + i+1);
         }
-        public string Name { get; }
-        public Port[] Ports { get; }
 
+
+        public void Send(string bit)
+        {
+            throw new NotImplementedException();
+        }
+        public int Receive()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

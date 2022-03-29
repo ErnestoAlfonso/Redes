@@ -6,29 +6,19 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    class Port
+    class Port : Device
     {
-        public Port(string name)
+        public Port(string name) : base(name)
         {
-            Send = -1;
-            Receive = -1;
-            Name = name;
-        }
-        public bool IsACompPort { get; set; } //booleano para saber si es el puerto es de un computadora
-        public bool IsAHubPort { get; set; } //booleano para saber si el puerto es de un hub
-        public string Name { get; }
-        public int Send { get; set; }
-        public int Receive { get; set; }
-        public Port Connection_Port { get; private set; }
-        public void Connect(Port port_2)
+        } 
+        public Wire _Wire { get; private set; }
+        public void Connect(Port port)
         {
-            Connection_Port = port_2;
-            port_2.Connection_Port = this;
+            _Wire = new Wire(this, port); 
         }
         public void Disconnect()
         {
-            this.Connection_Port.Connection_Port = null;
-            this.Connection_Port = null;
+            _Wire = null;
         }
     }
 }
