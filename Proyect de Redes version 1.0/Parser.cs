@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    internal class Parser
+    public static class Parser
     {
-        private System.IO.StreamReader _file;
-        public Parser()
-        {
-            _file = new System.IO.StreamReader("../Static/Input/script.txt");
-        }
-
         private static string[] CopyTo(string[] source, int start, int end)
         {
             string[] result = new string[end - start + 1];
@@ -24,15 +18,19 @@ namespace Proyect_de_Redes_version_1._0
             return result;
         }
 
-        private Instruction ParseLine(string line)
+        private static Type GetInstType(string str)
+        {
+            return Type.GetType("Proyect_de_Redes_version_1._0."+ str.First().ToString().ToUpper() + str.Substring(1) + "_Inst");
+        }
+
+        private static Instruction ParseLine(string line)
         {
             string[] splitedLine = line.Split();
 
             try
             {
-               
-                return new Instruction(int.Parse(splitedLine[0]), splitedLine[1], CopyTo(splitedLine, 2, splitedLine.Length - 1));
-           
+                return (Instruction)Activator.CreateInstance(GetInstType(splitedLine[1]), 
+                    new object[] { int.Parse(splitedLine[0]), CopyTo(splitedLine, 2, splitedLine.Length-1) });
             }
             catch (Exception)
             {
@@ -41,14 +39,16 @@ namespace Proyect_de_Redes_version_1._0
             }
         }
 
-        public Queue<Instruction> ReadFile()
+        public static List<Instruction> ReadFile(System.IO.StreamReader file)
         {
-            Queue<Instruction> instructions = new Queue<Instruction>();
+            List<Instruction> instructions = new List<Instruction>();
 
-            string line = _file.ReadLine();
+            string line = file.ReadLine();
             while (line != null)
             {
-                instructions.Enqueue(ParseLine(line));
+                instructions.Add(ParseLine(line));
+
+                line = file.ReadLine();
             }
 
             return instructions;

@@ -46,6 +46,7 @@
     <Compile Include="Connect_Inst.cs" />
     <Compile Include="Create_Inst.cs" />
     <Compile Include="Device.cs" />
+    <Compile Include="Disconnect_Inst.cs" />
     <Compile Include="Host.cs" />
     <Compile Include="Hub.cs" />
     <Compile Include="IActions.cs" />

@@ -16,6 +16,10 @@ namespace Proyect_de_Redes_version_1._0
         {
             //StreamWriter sw = File.AppendText(@"D:\Universidad\Proyecto de Redes");
             //sw.WriteLine("laskshdu");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Pablo Alonso\Documents\script.txt");
+            List<Instruction> insts = Parser.ReadFile(file);
+            Console.WriteLine(insts.Count);
+            Console.ReadLine();
 
         }
     }
