@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connect_Inst.cs" />
+    <Compile Include="Create_Inst.cs" />
     <Compile Include="Device.cs" />
+    <Compile Include="Disconnect_Inst.cs" />
     <Compile Include="Host.cs" />
     <Compile Include="Hub.cs" />
     <Compile Include="IActions.cs" />
@@ -53,6 +56,7 @@
     <Compile Include="Port.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Send_Inst.cs" />
     <Compile Include="Wire.cs" />
     <Compile Include="ControlNetwork.cs" />
   </ItemGroup>
