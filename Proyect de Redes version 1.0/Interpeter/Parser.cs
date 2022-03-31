@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyHeap;
 
 namespace Proyect_de_Redes_version_1._0
 {
@@ -26,7 +27,6 @@ namespace Proyect_de_Redes_version_1._0
         private static Instruction ParseLine(string line)
         {
             string[] splitedLine = line.Split();
-
             try
             {
                 return (Instruction)Activator.CreateInstance(GetInstType(splitedLine[1]), 
@@ -39,14 +39,14 @@ namespace Proyect_de_Redes_version_1._0
             }
         }
 
-        public static List<Instruction> ReadFile(System.IO.StreamReader file)
+        public static Heap<Instruction> ReadFile(System.IO.StreamReader file)
         {
-            List<Instruction> instructions = new List<Instruction>();
+            Heap<Instruction> instructions = new Heap<Instruction>(true);
 
             string line = file.ReadLine();
             while (line != null)
             {
-                instructions.Add(ParseLine(line));
+                instructions.Insert(ParseLine(line));
 
                 line = file.ReadLine();
             }

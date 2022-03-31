@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    class Port : Device, IActions
+    public class Port : Device, IActions
     {
         public Port(string name, LogicDevice owner) : base(name)
         {
@@ -15,7 +15,6 @@ namespace Proyect_de_Redes_version_1._0
 
 
         public Wire _Wire { get; private set; }
-        
         public LogicDevice Owner { get; } 
         public void Connect(Port port)
         {
