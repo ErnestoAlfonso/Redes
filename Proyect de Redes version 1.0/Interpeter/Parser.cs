@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyHeap;
 
 namespace Proyect_de_Redes_version_1._0
 {
@@ -27,11 +28,14 @@ namespace Proyect_de_Redes_version_1._0
         private Instruction ParseLine(string line)
         {
             string[] splitedLine = line.Split();
-
+            int priority = 0;
             try
             {
-               
-                return new Instruction(int.Parse(splitedLine[0]), splitedLine[1], CopyTo(splitedLine, 2, splitedLine.Length - 1));
+                if (splitedLine[1] == "create") priority = 1;
+                else if (splitedLine[1] == "connect") priority = 2;
+                else if (splitedLine[1] == "disconnect") priority = 3;
+                else if (splitedLine[1] == "send") priority = 40;     
+                return new Instruction(int.Parse(splitedLine[0]), splitedLine[1], CopyTo(splitedLine, 2, splitedLine.Length - 1), priority);
            
             }
             catch (Exception)
@@ -41,14 +45,13 @@ namespace Proyect_de_Redes_version_1._0
             }
         }
 
-        public Queue<Instruction> ReadFile()
+        public Heap<Instruction> ReadFile()
         {
-            Queue<Instruction> instructions = new Queue<Instruction>();
-
+            Heap<Instruction> instructions = new Heap<Instruction>(true);
             string line = _file.ReadLine();
             while (line != null)
             {
-                instructions.Enqueue(ParseLine(line));
+                instructions.Insert(ParseLine(line));
             }
 
             return instructions;

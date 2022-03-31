@@ -15,7 +15,6 @@ namespace Proyect_de_Redes_version_1._0
 
 
         public Wire _Wire { get; private set; }
-        
         public LogicDevice Owner { get; } 
         public void Connect(Port port)
         {
