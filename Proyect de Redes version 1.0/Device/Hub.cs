@@ -19,8 +19,8 @@ namespace Proyect_de_Redes_version_1._0
             {
                 if(i != ReceivePort)
                 {
-                    Ports[i]._Wire.Value = int.Parse(bit);
-                    Port portR = Ports[i]._Wire.ReceivePort(Name);
+                    Ports[i].Wire.Value = int.Parse(bit);
+                    Port portR = Ports[i].Wire.ConnectedPort(Name);
                     if (portR.Owner is Host)
                     {
                         Host hostR = (Host)portR.Owner;
@@ -37,7 +37,7 @@ namespace Proyect_de_Redes_version_1._0
         public void Receive(Port receivePort)
         {//falta escribir el txt
             ReceivePort = int.Parse(receivePort.Name[Name.Length - 1].ToString()) - 1;
-            string bit = receivePort._Wire.Value.ToString();
+            string bit = receivePort.Wire.Value.ToString();
             Send(bit);
         }
 

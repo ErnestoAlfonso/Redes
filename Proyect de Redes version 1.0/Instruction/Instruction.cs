@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    public abstract class Instruction: IComparable<Instruction>
+    public abstract class Instruction : IComparable<Instruction>
     {
         public Instruction(int time, string[] args, int priority)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    public class Disconnect_Inst : Instruction
+    public class Disconnect_Inst : Connection_Inst
     {
         public Disconnect_Inst(int time, string[] args) : base(time, args, 3)
         {
@@ -14,9 +14,7 @@ namespace Proyect_de_Redes_version_1._0
 
         public override void Execute(NetWork network)
         {
-            //    string device1 = GetName(Args[0]);
-            //    NameLogicDevice[device1].Ports[int.Parse(device1[device1.Length - 1].ToString()) - 1].Disconnect();
-            throw new NotImplementedException();
+            GetPort(Args[0], network).Disconnect();
         }
     }
 }

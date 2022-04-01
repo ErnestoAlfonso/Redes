@@ -14,15 +14,23 @@ namespace Proyect_de_Redes_version_1._0
         } 
 
 
-        public Wire _Wire { get; private set; }
+        public Wire Wire { get; internal set; }
         public LogicDevice Owner { get; } 
-        public void Connect(Port port)
-        {
-            _Wire = new Wire(this, port); 
-        }
+
+        //this method can be deleted cause the wire constructor
+
+        //public void Connect(Port port)
+        //{
+        //    Wire = new Wire(this, port); 
+        //}
         public void Disconnect()
         {
-            _Wire = null;
+            if(Wire != null)
+            {
+                Port connected = Wire.ConnectedPort(Name);
+                Wire = null;
+                connected.Disconnect();
+            }
         }
 
         public void Receive(Port receivePort)
@@ -32,8 +40,8 @@ namespace Proyect_de_Redes_version_1._0
 
         public void Send(string info)
         {
-            _Wire.Value = int.Parse(info);
-            Port portR = _Wire.ReceivePort(Name);
+            Wire.Value = int.Parse(info);
+            Port portR = Wire.ConnectedPort(Name);
             if(portR.Owner is Host)
             {
                 Host hostR = (Host)portR.Owner;

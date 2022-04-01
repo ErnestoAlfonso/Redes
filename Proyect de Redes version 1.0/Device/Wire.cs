@@ -13,11 +13,13 @@ namespace Proyect_de_Redes_version_1._0
             Port1 = port1;
             Port2 = port2;
             Value = -1; //en caso de que no haya nada en el cable
+            Port1.Wire = this;
+            Port2.Wire = this;  
         }
         public Port Port1 { get; }
         public Port Port2 { get; }
         
-        public Port ReceivePort(string name)
+        public Port ConnectedPort(string name)
         {
             if (Port1.Name == name)
                 return Port2;

@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    public class Connect_Inst : Instruction
+    public class Connect_Inst : Connection_Inst
     {
         public Connect_Inst(int time, string[] args) : base(time, args, 2)
         {
         }
 
+
         public override void Execute(NetWork network)
         {
-            //    string device1 = GetName(Args[0]);
-            //    string device2 = GetName(Args[1]);
-            //    NameLogicDevice[device1].Ports[int.Parse(device1[device1.Length - 1].ToString()) - 1].Connect(
-            //    NameLogicDevice[device2].Ports[int.Parse(device2[device2.Length - 1].ToString()) - 1]);
-            throw new NotImplementedException();
+            Port port1 = GetPort(Args[0], network);
+            Port port2 = GetPort(Args[1], network);
+
+            new Wire(port1, port2);
         }
     }
 }

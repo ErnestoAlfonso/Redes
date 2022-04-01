@@ -14,8 +14,26 @@ namespace Proyect_de_Redes_version_1._0
 
         public override void Execute(NetWork network)
         {
-            //    Host aux = (Host)NameLogicDevice[Args[0]];
-            //    aux.Send(Args[1]);
+            //we need to review this implementation
+
+            //Host currentHost = (Host)nWork.NameLogicDevice[Args[0]];
+            //if (currentHost.Ports[0]._Wire.Value == -1)
+            //{
+            //    currentHost.Send(Args[1]);
+            //    Time += 10;
+            //    Priority -= 1;
+            //    if (Args[1].Length > 1)
+            //    {
+            //        currentHost.CurrentBit++;
+            //        nWork.PriorityQueue.Insert(this);
+            //    }
+            //    nWork.TimeToClean = Time;
+            //}
+            //else
+            //{
+            //    Time += 10;
+
+            //}
             throw new NotImplementedException();
         }
     }
