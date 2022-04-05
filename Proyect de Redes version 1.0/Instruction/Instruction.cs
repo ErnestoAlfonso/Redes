@@ -25,7 +25,7 @@ namespace Proyect_de_Redes_version_1._0
                     break;
                 deviceName += item; 
             }  
-            return nWork.NameLogicDevice[deviceName].Ports[int.Parse(portName[portName.Length - 1].ToString())];
+            return nWork.NameLogicDevice[deviceName].Ports[int.Parse(portName[portName.Length - 1].ToString()) - 1];
         }
         
 

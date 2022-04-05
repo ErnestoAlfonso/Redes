@@ -17,7 +17,7 @@ namespace Proyect_de_Redes_version_1._0
         public int Time { get; private set; }
         public void Manage()
         {
-            _NetWork.PriorityQueue = Parser.ReadFile(new System.IO.StreamReader("foo"));
+            _NetWork.PriorityQueue = Parser.ReadFile(new System.IO.StreamReader("D:\\Universidad\\Proyecto de Redes\\Redes\\Scripts.txt"));
             bool end = false;
             while (!end)
             {
@@ -26,6 +26,9 @@ namespace Proyect_de_Redes_version_1._0
                     Instruction currentInstruction = _NetWork.PriorityQueue.Pop();
                     currentInstruction.Execute(_NetWork);
                 }
+                Time++;
+                if(_NetWork.PriorityQueue.Size == 0)
+                    end = true;
             }
 
 

@@ -22,12 +22,12 @@ namespace Proyect_de_Redes_version_1._0
         public void Send(string info, int time)
         {
             CountTime = info.Length * 10;
-            Ports[0].Send(info[CurrentBit].ToString(), time);
             WriteTxT(time, info[CurrentBit].ToString(), false);
+            Ports[0].Send(info[CurrentBit].ToString(), time);
         }//metodo para enviar la informacion que se quiere hacia el puerto requerido
         public void Receive(Port receivePort, int time)
         {
-            WriteTxT(time, receivePort.Wire.Value.ToString(), false); 
+            WriteTxT(time, receivePort.Wire.Value.ToString(), false);
         }
         public void WriteTxT(int time, string bit, bool collision)
         {
@@ -36,28 +36,19 @@ namespace Proyect_de_Redes_version_1._0
             {
                 if (IsSending)
                 {
-                    using (TxT)
-                    {
-                        TxT.WriteLine(time + " " + Name + " send " + bit + " ok");
-                    }
+                    Console.WriteLine(time + " " + Name + " send " + bit + " ok");
                 }
                 else
                 {
                     if (bit != "-1")
                     {
-                        using (TxT)
-                        {
-                            TxT.WriteLine(time + " " + Name + " receive " + bit + " ok");
-                        }
+                        Console.WriteLine(time + " " + Name + " receive " + bit + " ok");
                     }
                 }
             }
             else
             {
-                using (TxT)
-                {
-                    TxT.WriteLine(time + " " + Name + " send " + bit + " collision");
-                }
+                Console.WriteLine(time + " " + Name + " send " + bit + " collision");
             }
 
         }

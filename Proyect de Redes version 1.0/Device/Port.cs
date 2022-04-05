@@ -10,7 +10,7 @@ namespace Proyect_de_Redes_version_1._0
     {
         public Port(string name, LogicDevice owner) : base(name)
         {
-            Owner = owner;  
+            Owner = owner;
         } 
 
 

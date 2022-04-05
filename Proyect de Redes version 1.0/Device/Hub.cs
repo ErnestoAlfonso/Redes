@@ -17,29 +17,50 @@ namespace Proyect_de_Redes_version_1._0
         {
             for (int i = 0; i < Ports.Length; i++)
             {
-                if(i != ReceivePort)
+                if (i != ReceivePort)
                 {
-                    Ports[i].Wire.Value = int.Parse(bit);
-                    Port portR = Ports[i].Wire.ConnectedPort(Name);
-                    if (portR.Owner is Host)
+                    if (Ports[i].Wire != null)
                     {
-                        Host hostR = (Host)portR.Owner;
-                        hostR.Receive(portR, time);
-                    }
-                    else
-                    {
-                        Hub hubR = (Hub)portR.Owner;
-                        hubR.Receive(portR, time);
+                        Ports[i].Wire.Value = int.Parse(bit);
+                        Port portR = Ports[i].Wire.ConnectedPort(Ports[i].Name);
+                        if (portR.Owner is Host)
+                        {
+                            Host hostR = (Host)portR.Owner;
+                            hostR.Ports[0].Wire.Value = int.Parse(bit);
+                            hostR.Receive(portR, time);
+                        }
+                        else
+                        {
+                            Hub hubR = (Hub)portR.Owner;
+                            hubR.Ports[portR.Name[int.Parse(portR.Name[portR.Name.Length-1].ToString())-1]].Wire.Value = int.Parse(bit);
+                            hubR.Receive(portR, time);
+                        }
                     }
                 }
             }
         }
         public void Receive(Port receivePort, int time)
         {//falta escribir el txt
-            ReceivePort = int.Parse(receivePort.Name[Name.Length - 1].ToString()) - 1;
+            ReceivePort = int.Parse(receivePort.Name[receivePort.Name.Length - 1].ToString());
             string bit = receivePort.Wire.Value.ToString();
+            if (bit != "-1")
+                WriteTxT(time, bit);
             Send(bit, time);
         }
+        public void WriteTxT(int time, string bit)
+        {
+            for (int i = 0; i < Ports.Length; i++)
+            {
+                if (i == ReceivePort)
+                {
+                    Console.WriteLine(time + " " + Ports[i].Name + " receive " + bit);
+                }
+                else
+                {
+                    Console.WriteLine(time + " " + Ports[i].Name + " send " + bit);
+                }
+            }
 
+        }
     }
 }

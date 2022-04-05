@@ -17,12 +17,14 @@ namespace Proyect_de_Redes_version_1._0
         {
 
             Host currentHost = (Host)network.NameLogicDevice[Args[0]];
+            if (currentHost.Ports[0].Wire == null)
+                return;
             if (currentHost.Ports[0].Wire.Value == -1)
             {
+                currentHost.IsSending = true;
                 currentHost.Send(Args[1], Time);
                 Time += 10;
                 Priority -= 1;
-                currentHost.IsSending = true;
                 if (currentHost.CurrentBit < Args[1].Length - 1)
                 {
                     currentHost.CurrentBit++;
@@ -34,8 +36,8 @@ namespace Proyect_de_Redes_version_1._0
             else
             {
                 currentHost.WriteTxT(Time, Args[1][currentHost.CurrentBit].ToString(), true);
-                Time += network.SendTime;
-
+                Time += 10;
+                network.PriorityQueue.Insert(this);
             }
         }
     }

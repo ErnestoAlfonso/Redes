@@ -1,9 +1,10 @@
-0 create hot pc1 
-0 create hot pc2 
-0 connect pc1_1 pc2_1
-0 create hot pc2 
-10 disconnect pc1_1
-10 send pc1 10011100
-10 create hub hub1 4
-20 connect h_1 pc2_1
-20 disconnect pc2
+0 create host pc1 
+0 create host pc2
+0 create host pc3
+0 create hub h1 4
+10 connect pc1_1 h1_1
+10 connect pc2_1 h1_2
+10 connect pc3_1 h1_3
+10 send pc1 1010
+10 send pc2 0101
+30 disconnect pc1_1
