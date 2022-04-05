@@ -8,17 +8,30 @@ namespace Proyect_de_Redes_version_1._0
 {
     public abstract class Instruction : IComparable<Instruction>
     {
+       
+        
         public Instruction(int time, string[] args, int priority)
         {
             Time = time;
             Args = args;
             Priority = priority;
         }
+        protected static Port GetPort(string portName, NetWork nWork)
+        {
+            string deviceName = "";
+            foreach (var item in portName)
+            {
+                if (item == '_')
+                    break;
+                deviceName += item; 
+            }  
+            return nWork.NameLogicDevice[deviceName].Ports[int.Parse(portName[portName.Length - 1].ToString())];
+        }
         
 
         public int Time { get; set; }
         public string[] Args { get; set; }
-        public int Priority { get; private set; }
+        public int Priority { get; protected set; }
 
         public int CompareTo(Instruction other)
         {

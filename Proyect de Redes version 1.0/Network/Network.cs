@@ -13,23 +13,12 @@ namespace Proyect_de_Redes_version_1._0
         public NetWork()
         {
             NameLogicDevice = new Dictionary<string, LogicDevice>();
-            AllWires = new LinkedList<Wire>(); 
         }
         public Heap<Instruction> PriorityQueue { get; set; }
         public Dictionary<string, LogicDevice> NameLogicDevice { get; set; }
 
-        public int TimeToClean { get; set; }
-        public LinkedList<Wire> AllWires { get; set; }    
-
-        public void CleanNetWork()
-        {
-            foreach (var wire in AllWires)
-            {
-                wire.Value = -1;    
-            }
-
-
-        }
+        public int SendTime { get; set; }   
+    
       
 
     }

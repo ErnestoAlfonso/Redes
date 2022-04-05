@@ -8,8 +8,8 @@ namespace Proyect_de_Redes_version_1._0
 {
     interface IActions
     {
-        void Send(string info);
-        void Receive(Port receivePort);   
+        void Send(string info, int time);
+        void Receive(Port receivePort, int time);   
 
     }
 }

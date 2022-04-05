@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    public class Connect_Inst : Connection_Inst
+    public class Connect_Inst : Instruction
     {
         public Connect_Inst(int time, string[] args) : base(time, args, 2)
         {

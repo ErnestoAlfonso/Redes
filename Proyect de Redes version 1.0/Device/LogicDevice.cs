@@ -15,9 +15,10 @@ namespace Proyect_de_Redes_version_1._0
             for (int i = 0; i < numberPorts; i++) 
             {
                 Ports[i] = new Port(name + "_" + i + 1, this);
-            }       
+            }
+            TxT = new StreamWriter(Tools.root);
         }
-      
+        public StreamWriter TxT { get; set; }
         public Port[] Ports { get; set; }
     }
 }

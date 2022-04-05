@@ -13,6 +13,10 @@ namespace Proyect_de_Redes_version_1._0
     {
         static void Main(string[] args)
         {
+            int a = -1;
+            Console.WriteLine(a.ToString());
+
+
             //StreamWriter sw = File.AppendText(@"D:\Universidad\Proyecto de Redes");
             //sw.WriteLine("laskshdu");
         }

@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-
- 
-    public abstract class Device
+    public static class Tools
     {
-        
-        public Device(string name)
-        {
-            Name = name;
-        }
-        public string Name { get; }
+       public const string root = "D:\\Universidad\\Proyecto de Redes\\Redes\\solutionsTxt";
     }
 }

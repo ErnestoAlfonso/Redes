@@ -13,7 +13,7 @@ namespace Proyect_de_Redes_version_1._0
         }
 
         public int ReceivePort { get; set; }
-        public void Send(string bit)
+        public void Send(string bit, int time)
         {
             for (int i = 0; i < Ports.Length; i++)
             {
@@ -24,21 +24,21 @@ namespace Proyect_de_Redes_version_1._0
                     if (portR.Owner is Host)
                     {
                         Host hostR = (Host)portR.Owner;
-                        hostR.Receive(portR);
+                        hostR.Receive(portR, time);
                     }
                     else
                     {
                         Hub hubR = (Hub)portR.Owner;
-                        hubR.Receive(portR);
+                        hubR.Receive(portR, time);
                     }
                 }
             }
         }
-        public void Receive(Port receivePort)
+        public void Receive(Port receivePort, int time)
         {//falta escribir el txt
             ReceivePort = int.Parse(receivePort.Name[Name.Length - 1].ToString()) - 1;
             string bit = receivePort.Wire.Value.ToString();
-            Send(bit);
+            Send(bit, time);
         }
 
     }
