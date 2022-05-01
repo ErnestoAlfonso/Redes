@@ -1,0 +1,12 @@
+10 pc1 receive 0 ok 
+10 pc1 send 1 collision 
+20 pc1 receive 1 ok 
+20 pc1 send 1 collision 
+30 pc1 receive 0 ok 
+30 pc1 send 1 collision 
+40 pc1 receive 1 ok 
+40 pc1 send 1 collision 
+50 pc1 send 1 ok
+60 pc1 send 0 ok
+70 pc1 send 1 ok
+80 pc1 send 0 ok

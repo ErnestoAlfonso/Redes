@@ -7,4 +7,3 @@
 10 connect pc3_1 h1_3
 10 send pc1 1010
 10 send pc2 0101
-30 disconnect pc1_1

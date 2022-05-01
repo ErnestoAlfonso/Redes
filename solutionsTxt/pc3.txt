@@ -1,0 +1,8 @@
+10 pc3 receive 0 ok 
+20 pc3 receive 1 ok 
+30 pc3 receive 0 ok 
+40 pc3 receive 1 ok 
+50 pc3 receive 1 ok 
+60 pc3 receive 0 ok 
+70 pc3 receive 1 ok 
+80 pc3 receive 0 ok 

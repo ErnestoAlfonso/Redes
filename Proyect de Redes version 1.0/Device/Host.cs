@@ -31,26 +31,30 @@ namespace Proyect_de_Redes_version_1._0
         }
         public void WriteTxT(int time, string bit, bool collision)
         {
-
             if (!collision)
             {
                 if (IsSending)
                 {
-                    Console.WriteLine(time + " " + Name + " send " + bit + " ok");
+                    TxT.WriteLine(time + " " + Name + " send " + bit + " ok");
+                    //Console.WriteLine(time + " " + Name + " send " + bit + " ok");
+                    //TxT.Close();
                 }
                 else
                 {
                     if (bit != "-1")
                     {
-                        Console.WriteLine(time + " " + Name + " receive " + bit + " ok");
+                        TxT.WriteLine(time + " " + Name + " receive " + bit + " ok ");
+                        //Console.WriteLine(time + " " + Name + " receive " + bit + " ok ");
+                        //TxT.Close();
                     }
                 }
             }
             else
             {
-                Console.WriteLine(time + " " + Name + " send " + bit + " collision");
+                TxT.WriteLine(time + " " + Name + " send " + bit + " collision ");
+                //Console.WriteLine(time + " " + Name + " send " + bit + " collision ");
             }
-
+               //TxT.Close();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Proyect_de_Redes_version_1._0
         {
 
             Host currentHost = (Host)network.NameLogicDevice[Args[0]];
+
             if (currentHost.Ports[0].Wire == null)
                 return;
             if (currentHost.Ports[0].Wire.Value == -1)

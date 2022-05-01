@@ -16,7 +16,6 @@ namespace Proyect_de_Redes_version_1._0
         }
         public Heap<Instruction> PriorityQueue { get; set; }
         public Dictionary<string, LogicDevice> NameLogicDevice { get; set; }
-
         public int SendTime { get; set; }   
     
       

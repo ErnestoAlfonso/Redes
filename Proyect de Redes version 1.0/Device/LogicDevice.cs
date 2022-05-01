@@ -12,13 +12,15 @@ namespace Proyect_de_Redes_version_1._0
         public LogicDevice(string name, int numberPorts) : base(name)
         {
             Ports = new Port[numberPorts];
-            for (int i = 0; i < numberPorts; i++) 
+            for (int i = 0; i < numberPorts; i++)
             {
                 Ports[i] = new Port(name + "_" + i, this);
             }
-        //    TxT = new StreamWriter(Tools.root);
+            Root = Tools.root + this.Name+".txt";
+            TxT = File.AppendText(Root);
         }
-       // public StreamWriter TxT { get; set; }
+        public string Root { get; set; }
+        public StreamWriter TxT { get; set; }   
         public Port[] Ports { get; set; }
     }
 }

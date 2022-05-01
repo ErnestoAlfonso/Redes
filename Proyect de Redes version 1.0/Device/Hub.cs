@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Proyect_de_Redes_version_1._0
 {
@@ -32,7 +33,7 @@ namespace Proyect_de_Redes_version_1._0
                         else
                         {
                             Hub hubR = (Hub)portR.Owner;
-                            hubR.Ports[portR.Name[int.Parse(portR.Name[portR.Name.Length-1].ToString())-1]].Wire.Value = int.Parse(bit);
+                            hubR.Ports[portR.Name[int.Parse(portR.Name[portR.Name.Length - 1].ToString()) - 1]].Wire.Value = int.Parse(bit);
                             hubR.Receive(portR, time);
                         }
                     }
@@ -53,14 +54,16 @@ namespace Proyect_de_Redes_version_1._0
             {
                 if (i == ReceivePort)
                 {
-                    Console.WriteLine(time + " " + Ports[i].Name + " receive " + bit);
+                    TxT.WriteLine(time + " " + Ports[i].Name + " receive " + bit);
+                    //Console.WriteLine(time + " " + Ports[i].Name + " receive " + bit);
                 }
                 else
                 {
-                    Console.WriteLine(time + " " + Ports[i].Name + " send " + bit);
+                    TxT.WriteLine(time + " " + Ports[i].Name + " send " + bit);
+                    //Console.WriteLine(time + " " + Ports[i].Name + " send " + bit);
                 }
             }
-
+            //TxT.Close();
         }
     }
 }
