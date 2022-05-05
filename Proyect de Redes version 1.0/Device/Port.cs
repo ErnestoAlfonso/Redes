@@ -40,7 +40,7 @@ namespace Proyect_de_Redes_version_1._0
 
         public void Send(string info,int time)
         {
-            Wire.Value = int.Parse(info);
+            Wire.GetThreadToSend(this).Value = int.Parse(info);
             Port portR = Wire.ConnectedPort(Name);
             if(portR.Owner is Host)
             {

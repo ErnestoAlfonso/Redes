@@ -22,18 +22,19 @@ namespace Proyect_de_Redes_version_1._0
                 {
                     if (Ports[i].Wire != null)
                     {
-                        Ports[i].Wire.Value = int.Parse(bit);
+                        Ports[i].Wire.GetThreadToSend(Ports[i]).Value = int.Parse(bit);
                         Port portR = Ports[i].Wire.ConnectedPort(Ports[i].Name);
                         if (portR.Owner is Host)
                         {
                             Host hostR = (Host)portR.Owner;
-                            hostR.Ports[0].Wire.Value = int.Parse(bit);
+                            hostR.Ports[0].Wire.GetThreadToRecieve(Ports[0]).Value = int.Parse(bit);
                             hostR.Receive(portR, time);
                         }
                         else
                         {
                             Hub hubR = (Hub)portR.Owner;
-                            hubR.Ports[portR.Name[int.Parse(portR.Name[portR.Name.Length - 1].ToString()) - 1]].Wire.Value = int.Parse(bit);
+                            var currentPort = hubR.Ports[int.Parse(portR.Name[int.Parse(portR.Name[portR.Name.Length - 1].ToString()) - 1].ToString())];  
+                            currentPort.Wire.GetThreadToRecieve(currentPort).Value = int.Parse(bit);
                             hubR.Receive(portR, time);
                         }
                     }
@@ -43,7 +44,7 @@ namespace Proyect_de_Redes_version_1._0
         public void Receive(Port receivePort, int time)
         {//falta escribir el txt
             ReceivePort = int.Parse(receivePort.Name[receivePort.Name.Length - 1].ToString());
-            string bit = receivePort.Wire.Value.ToString();
+            string bit = receivePort.Wire.GetThreadToRecieve(receivePort).Value.ToString();
             if (bit != "-1")
                 WriteTxT(time, bit);
             Send(bit, time);

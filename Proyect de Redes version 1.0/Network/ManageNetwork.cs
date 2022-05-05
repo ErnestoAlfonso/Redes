@@ -37,12 +37,6 @@ namespace Proyect_de_Redes_version_1._0
                     }
                 }
             }
-
         }
-
-
-
-
-
     }
 }

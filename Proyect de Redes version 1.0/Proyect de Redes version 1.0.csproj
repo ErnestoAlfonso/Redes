@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frame.cs" />
     <Compile Include="Instruction\Connect_Inst.cs" />
     <Compile Include="Instruction\Create_Inst.cs" />
     <Compile Include="Instruction\Disconnect_Inst.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Heap\Node.cs" />
     <Compile Include="Device\LogicDevice.cs" />
     <Compile Include="Instruction\StopSending.cs" />
+    <Compile Include="Instruction\Mac_Inst.cs" />
     <Compile Include="Network\ManageNetwork.cs" />
     <Compile Include="Network\Network.cs" />
     <Compile Include="Interpeter\Parser.cs" />

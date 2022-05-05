@@ -1,8 +1,8 @@
+10 pc2 receive 1 ok 
 10 pc2 send 0 ok
 20 pc2 send 1 ok
+20 pc2 receive 0 ok 
+30 pc2 receive 1 ok 
 30 pc2 send 0 ok
 40 pc2 send 1 ok
-50 pc2 receive 1 ok 
-60 pc2 receive 0 ok 
-70 pc2 receive 1 ok 
-80 pc2 receive 0 ok 
+40 pc2 receive 0 ok 

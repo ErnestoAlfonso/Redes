@@ -16,11 +16,11 @@ namespace Proyect_de_Redes_version_1._0
             {
                 Ports[i] = new Port(name + "_" + i, this);
             }
-            Root = Tools.root + this.Name+".txt";
+            Root = Tools.root + this.Name + ".txt";
             TxT = File.AppendText(Root);
         }
         public string Root { get; set; }
-        public StreamWriter TxT { get; set; }   
+        public StreamWriter TxT { get; set; }
         public Port[] Ports { get; set; }
     }
 }

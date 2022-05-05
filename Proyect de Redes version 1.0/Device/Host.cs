@@ -18,22 +18,24 @@ namespace Proyect_de_Redes_version_1._0
         public int CurrentBit { get; set; }
         public bool IsSending { get; set; }
 
+        public string MacAddress { get; set; }
+
 
         public void Send(string info, int time)
         {
             CountTime = info.Length * 10;
-            WriteTxT(time, info[CurrentBit].ToString(), false);
+            WriteTxT(time, info[CurrentBit].ToString(), false, true);
             Ports[0].Send(info[CurrentBit].ToString(), time);
         }//metodo para enviar la informacion que se quiere hacia el puerto requerido
         public void Receive(Port receivePort, int time)
         {
-            WriteTxT(time, receivePort.Wire.Value.ToString(), false);
+            WriteTxT(time, receivePort.Wire.GetThreadToRecieve(receivePort).Value.ToString(), false, false);
         }
-        public void WriteTxT(int time, string bit, bool collision)
+        public void WriteTxT(int time, string bit, bool collision, bool send)
         {
             if (!collision)
             {
-                if (IsSending)
+                if (send)
                 {
                     TxT.WriteLine(time + " " + Name + " send " + bit + " ok");
                     //Console.WriteLine(time + " " + Name + " send " + bit + " ok");

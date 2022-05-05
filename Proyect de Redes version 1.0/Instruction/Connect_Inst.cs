@@ -8,11 +8,9 @@ namespace Proyect_de_Redes_version_1._0
 {
     public class Connect_Inst : Instruction
     {
-        public Connect_Inst(int time, string[] args) : base(time, args, 2)
+        public Connect_Inst(int time, string[] args) : base(time, args, 3)
         {
         }
-
-
         public override void Execute(NetWork network)
         {
             Port port1 = GetPort(Args[0], network);

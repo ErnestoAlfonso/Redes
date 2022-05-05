@@ -20,7 +20,7 @@ namespace Proyect_de_Redes_version_1._0
 
             if (currentHost.Ports[0].Wire == null)
                 return;
-            if (currentHost.Ports[0].Wire.Value == -1)
+            if (currentHost.Ports[0].Wire.GetThreadToSend(currentHost.Ports[0]).Value == -1)
             {
                 currentHost.IsSending = true;
                 currentHost.Send(Args[1], Time);
@@ -36,7 +36,7 @@ namespace Proyect_de_Redes_version_1._0
             }
             else
             {
-                currentHost.WriteTxT(Time, Args[1][currentHost.CurrentBit].ToString(), true);
+                currentHost.WriteTxT(Time, Args[1][currentHost.CurrentBit].ToString(), true, true);
                 Time += 10;
                 network.PriorityQueue.Insert(this);
             }

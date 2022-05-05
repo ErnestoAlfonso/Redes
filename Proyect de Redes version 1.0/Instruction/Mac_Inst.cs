@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Proyect_de_Redes_version_1._0
 {
-    public class Disconnect_Inst : Instruction
+    public class Mac_Inst : Instruction
     {
-        public Disconnect_Inst(int time, string[] args) : base(time, args, 4)
+        public Mac_Inst(int time, string[] args, int priority) : base(time, args, 2)
         {
         }
 
         public override void Execute(NetWork network)
         {
-            GetPort(Args[0], network).Disconnect();
+            Host currentHost = (Host)network.NameLogicDevice[Args[0]];
+            currentHost.MacAddress = Args[1];
         }
     }
 }
