@@ -8,6 +8,7 @@ namespace Proyect_de_Redes_version_1._0
 {
     public class Frame
     {
+        private int databits;
         public Frame()
         {
             CurrentFrame = "";
@@ -15,11 +16,11 @@ namespace Proyect_de_Redes_version_1._0
 
         public Frame(string destination, string origin, string data)
         {
-            SizeData = GetSize(data);
-            VerifSize = "00000000";
-            CurrentFrame = Tools.HexToBinary(destination + origin) + SizeData + VerifSize + Tools.HexToBinary(data);
+            databits = data.Length * 4;
+            string sizeData = GetSize(data);
+            string verifSize = "00000000";
+            CurrentFrame = Tools.HexToBinary(destination + origin) + sizeData + verifSize + Tools.HexToBinary(data);
         }
-
         private string GetSize(string data)
         {
             int rest = data.Length % 2;
@@ -44,9 +45,11 @@ namespace Proyect_de_Redes_version_1._0
 
         public string MacAddressOrigin { get { return CurrentFrame.Substring(16, 16); } }
 
-        public string SizeData { get; }
+        public string SizeData { get { return CurrentFrame.Substring(32, 8); } }
 
-        public string VerifSize { get; }
+        public string VerifSize { get { return CurrentFrame.Substring(40, 8); } }
+
+        public string Data { get { return CurrentFrame.Substring(48, databits); } }
 
     }
 }
