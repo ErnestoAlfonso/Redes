@@ -16,8 +16,8 @@ namespace Proyect_de_Redes_version_1._0
         public Frame(string destination, string origin, string data)
         {
             SizeData = GetSize(data);
-
-            CurrentFrame = Tools.HexToBinary(destination + origin + data);
+            VerifSize = "00000000";
+            CurrentFrame = Tools.HexToBinary(destination + origin) + SizeData + VerifSize + Tools.HexToBinary(data);
         }
 
         private string GetSize(string data)
@@ -27,6 +27,9 @@ namespace Proyect_de_Redes_version_1._0
             string binBytes = Convert.ToString(bytes, 2);
             for (int i = binBytes.Length; i < 8; i++)
                 binBytes = "0" + binBytes;
+            
+            if (rest > 0)
+                data = "0" + data;
             return binBytes;
         }
 
@@ -38,10 +41,12 @@ namespace Proyect_de_Redes_version_1._0
         public string CurrentFrame { get; set; }
 
         public string MacAddressDest { get { return CurrentFrame.Substring(0, 16); } }
-         
+
         public string MacAddressOrigin { get { return CurrentFrame.Substring(16, 16); } }
 
         public string SizeData { get; }
+
+        public string VerifSize { get; }
 
     }
 }
