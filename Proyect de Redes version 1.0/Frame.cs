@@ -8,16 +8,27 @@ namespace Proyect_de_Redes_version_1._0
 {
     public class Frame
     {
-        public Frame()
+        private int databits;
+        private string _verifbits;
+        public Frame(string frame)
         {
-            CurrentFrame = "";
+            MacAddressDest = CurrentFrame.Substring(0, 16);
+            MacAddressOrigin = CurrentFrame.Substring(16, 16);
+            DataSize = CurrentFrame.Substring(32, 8);
+            VerifSize = CurrentFrame.Substring(40, 8);
+            Data = CurrentFrame.Substring(48, databits);
+            VerifBits = CurrentFrame.Substring(48 + databits);
         }
 
         public Frame(string destination, string origin, string data)
         {
-            SizeData = GetSize(data);
-
-            CurrentFrame = Tools.HexToBinary(destination + origin + data);
+            databits = data.Length * 4;
+            MacAddressDest = Tools.HexToBinary(destination);
+            MacAddressOrigin = Tools.HexToBinary(origin);
+            Data = data;
+            DataSize = GetSize(data);
+            VerifSize = "00000000";
+            _verifbits = "";
         }
 
         public string GetSize(string data)
@@ -27,21 +38,37 @@ namespace Proyect_de_Redes_version_1._0
             string binBytes = Convert.ToString(bytes, 2);
             for (int i = binBytes.Length; i < 8; i++)
                 binBytes = "0" + binBytes;
+            
+            if (rest > 0)
+                data = "0" + data;
             return binBytes;
         }
 
-        public static Frame operator +(Frame frame1, string frame2)
-        {
-            frame1.CurrentFrame += frame2;
-            return frame1;
+        //public static Frame operator +(Frame frame1, string frame2)
+        //{
+        //    frame1.CurrentFrame += frame2;
+        //    return frame1;
+        //}
+        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits} }
+
+        public string MacAddressDest { get; set; }
+
+        public string MacAddressOrigin { get; set; }
+
+        public string DataSize { get; set; }
+
+        public string VerifSize { get; set; }
+
+        public string Data { get; set; }
+
+        public string VerifBits {
+            get => _verifbits;
+            set { 
+                _verifbits = value;
+                string bytes = Convert.ToString(_verifbits.Length, 2);
+                for (int i = bytes.Length; i < 8; i++)
+                    bytes = "0" + bytes;
+            } 
         }
-        public string CurrentFrame { get; set; }
-
-        public string MacAddressDest { get { return CurrentFrame.Substring(0, 16); } }
-         
-        public string MacAddressOrigin { get { return CurrentFrame.Substring(16, 16); } }
-
-        public string SizeData { get; }
-
     }
 }
