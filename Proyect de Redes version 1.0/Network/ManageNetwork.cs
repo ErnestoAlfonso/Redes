@@ -34,6 +34,11 @@ namespace Proyect_de_Redes_version_1._0
                     foreach (var item in _NetWork.NameLogicDevice.Values)
                     {
                         item.TxT.Close();
+                        if(item is Host)
+                        {
+                            Host aux = (Host)item;
+                            aux.DataTxT.Close();
+                        }
                     }
                 }
             }

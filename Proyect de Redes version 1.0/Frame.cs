@@ -9,19 +9,33 @@ namespace Proyect_de_Redes_version_1._0
     public class Frame
     {
         private int databits;
+
+        private int Count { get; set; }
+
         private string _verifbits;
         public Frame(string frame)
-        private int Count { get; set; }
-        public Frame(string currentFrame)
         {
-            CurrentFrame = "";
+            MacAddressDest = frame.Substring(0, 16);
+            MacAddressOrigin = frame.Substring(16, 16);
+            DataSize = frame.Substring(32, 8);
+            VerifSize = frame.Substring(40, 8);
+            int dataBytes = Convert.ToInt32(DataSize, 2);
+            databits = dataBytes * 8;
+            Data = frame.Substring(48, databits);
+            VerifBits = frame.Substring(48 + databits);
+
         }
         public Frame(string destination, string origin, string data)
         {
             databits = data.Length * 4;
-            string sizeData = GetSize(data);
-            string verifSize = "00000000";
-            CurrentFrame = Tools.HexToBinary(destination + origin) + sizeData + verifSize + Tools.HexToBinary(data);
+            Count = 0;
+
+            MacAddressDest = Tools.HexToBinary(destination);
+            MacAddressOrigin = Tools.HexToBinary(origin);
+            DataSize = GetSize(data);
+            Data = Tools.HexToBinary(data);
+            VerifSize = "00000000";
+            _verifbits = "";
         }
 
         public string GetSize(string data)
@@ -37,22 +51,33 @@ namespace Proyect_de_Redes_version_1._0
             return binBytes;
         }
 
-        public static Frame operator +(Frame frame1, string frame2)
+        public string NextBit()
         {
-            frame1.CurrentFrame += frame2;
-            return frame1;
+            string bit = CurrentFrame[Count].ToString();
+            Count++;
+            return bit;
         }
-        public string CurrentFrame { get; set; }
 
-        public string MacAddressDest { get { return CurrentFrame.Substring(0, 16); } }
+        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits; } }
 
-        public string MacAddressOrigin { get { return CurrentFrame.Substring(16, 16); } }
+        public string MacAddressDest { get; set; }
 
-        public string SizeData { get { return CurrentFrame.Substring(32, 8); } }
+        public string MacAddressOrigin { get; set; }
 
-        public string VerifSize { get { return CurrentFrame.Substring(40, 8); } }
+        public string DataSize { get; set; }
 
-        public string Data { get { return CurrentFrame.Substring(48, databits); } }
+        public string VerifSize { get; set; }
 
+        public string Data { get; set; }
+
+        public string VerifBits {
+            get => _verifbits;
+            set { 
+                _verifbits = value;
+                string bytes = Convert.ToString(_verifbits.Length, 2);
+                for (int i = bytes.Length; i < 8; i++)
+                    bytes = "0" + bytes;
+            } 
+        }
     }
 }

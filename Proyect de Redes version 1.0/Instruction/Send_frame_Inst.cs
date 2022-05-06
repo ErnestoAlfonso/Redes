@@ -16,10 +16,10 @@ namespace Proyect_de_Redes_version_1._0
         {
             Host currenthost = (Host)network.NameLogicDevice[Args[0]];
             Frame frame = new Frame(Args[1], currenthost.MacAddress, Args[2]);
-            currenthost.FrameToSend = frame.CurrentFrame;
+            currenthost.FrameToSend = frame;
             string[] current_args = new string[2];
             current_args[0] = currenthost.Name;
-            current_args[1] = currenthost.FrameToSend;
+            current_args[1] = currenthost.FrameToSend.CurrentFrame;
             Send_Inst send_instFTS = new Send_Inst(Time, current_args);
             network.PriorityQueue.Insert(send_instFTS);
         }

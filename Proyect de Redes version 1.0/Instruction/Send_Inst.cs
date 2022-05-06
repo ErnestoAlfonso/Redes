@@ -23,7 +23,7 @@ namespace Proyect_de_Redes_version_1._0
             if (currentHost.Ports[0].Wire.GetThreadToSend(currentHost.Ports[0]).Value == -1)
             {
                 currentHost.IsSending = true;
-                currentHost.Send(Args[1], Time);
+                currentHost.Send(Args[1], Time, false); 
                 Time += 10;
                 Priority -= 1;
                 if (currentHost.CurrentBit < Args[1].Length - 1)

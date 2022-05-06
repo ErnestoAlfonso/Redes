@@ -33,24 +33,24 @@ namespace Proyect_de_Redes_version_1._0
             }
         }
 
-        public void Receive(Port receivePort, int time)
+        public void Receive(Port receivePort, int time, bool end)
         {
             throw new NotImplementedException();
         }
 
-        public void Send(string info,int time)
+        public void Send(string info,int time, bool end)
         {
             Wire.GetThreadToSend(this).Value = int.Parse(info);
             Port portR = Wire.ConnectedPort(Name);
             if(portR.Owner is Host)
             {
                 Host hostR = (Host)portR.Owner;
-                hostR.Receive(portR, time);
+                hostR.Receive(portR, time, end);
             }
             else
             {
                 Hub hubR = (Hub)portR.Owner;
-                hubR.Receive(portR, time);
+                hubR.Receive(portR, time, end);
             }
         }
     }

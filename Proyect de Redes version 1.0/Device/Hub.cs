@@ -14,7 +14,7 @@ namespace Proyect_de_Redes_version_1._0
         }
 
         public int ReceivePort { get; set; }
-        public void Send(string bit, int time)
+        public void Send(string bit, int time, bool end)
         {
             for (int i = 0; i < Ports.Length; i++)
             {
@@ -28,26 +28,26 @@ namespace Proyect_de_Redes_version_1._0
                         {
                             Host hostR = (Host)portR.Owner;
                             hostR.Ports[0].Wire.GetThreadToRecieve(Ports[0]).Value = int.Parse(bit);
-                            hostR.Receive(portR, time);
+                            hostR.Receive(portR, time, end);
                         }
                         else
                         {
                             Hub hubR = (Hub)portR.Owner;
                             var currentPort = hubR.Ports[int.Parse(portR.Name[int.Parse(portR.Name[portR.Name.Length - 1].ToString()) - 1].ToString())];  
                             currentPort.Wire.GetThreadToRecieve(currentPort).Value = int.Parse(bit);
-                            hubR.Receive(portR, time);
+                            hubR.Receive(portR, time, end);
                         }
                     }
                 }
             }
         }
-        public void Receive(Port receivePort, int time)
+        public void Receive(Port receivePort, int time, bool end)
         {//falta escribir el txt
             ReceivePort = int.Parse(receivePort.Name[receivePort.Name.Length - 1].ToString());
             string bit = receivePort.Wire.GetThreadToRecieve(receivePort).Value.ToString();
             if (bit != "-1")
                 WriteTxT(time, bit);
-            Send(bit, time);
+            Send(bit, time, end);
         }
         public void WriteTxT(int time, string bit)
         {

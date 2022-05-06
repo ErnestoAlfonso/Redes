@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyect_de_Redes_version_1._0.Error_Detection
+namespace Proyect_de_Redes_version_1._0
 {
     public abstract class Error_Detection
     {
