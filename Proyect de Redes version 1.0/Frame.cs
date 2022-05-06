@@ -12,12 +12,12 @@ namespace Proyect_de_Redes_version_1._0
         private string _verifbits;
         public Frame(string frame)
         {
-            MacAddressDest = CurrentFrame.Substring(0, 16);
-            MacAddressOrigin = CurrentFrame.Substring(16, 16);
-            DataSize = CurrentFrame.Substring(32, 8);
-            VerifSize = CurrentFrame.Substring(40, 8);
-            Data = CurrentFrame.Substring(48, databits);
-            VerifBits = CurrentFrame.Substring(48 + databits);
+            MacAddressDest = frame.Substring(0, 16);
+            MacAddressOrigin = frame.Substring(16, 16);
+            DataSize = frame.Substring(32, 8);
+            VerifSize = frame.Substring(40, 8);
+            Data = frame.Substring(48, databits);
+            VerifBits = frame.Substring(48 + databits);
         }
 
         public Frame(string destination, string origin, string data)
@@ -25,7 +25,7 @@ namespace Proyect_de_Redes_version_1._0
             databits = data.Length * 4;
             MacAddressDest = Tools.HexToBinary(destination);
             MacAddressOrigin = Tools.HexToBinary(origin);
-            Data = data;
+            Data = Tools.HexToBinary(data);
             DataSize = GetSize(data);
             VerifSize = "00000000";
             _verifbits = "";
@@ -49,7 +49,7 @@ namespace Proyect_de_Redes_version_1._0
         //    frame1.CurrentFrame += frame2;
         //    return frame1;
         //}
-        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits} }
+        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits; } }
 
         public string MacAddressDest { get; set; }
 

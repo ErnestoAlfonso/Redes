@@ -13,6 +13,10 @@ namespace Proyect_de_Redes_version_1._0
         {
             string binValue = "";
             binValue = Convert.ToString(Convert.ToInt32(hexValue, 16), 2);
+            for (int i = binValue.Length; i < hexValue.Length * 4; i++)
+            {
+                binValue = "0" + binValue;
+            }
             return binValue;
         }
         public static string BinaryToHex(string binValue)
