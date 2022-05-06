@@ -21,9 +21,18 @@ namespace Proyect_de_Redes_version_1._0
                 }
                 verification_bits += parity;
             }
-
+            FillBits(verification_bits);
             return verification_bits;
         }
+
+        private void FillBits(string verification_bits)
+        {
+            if (verification_bits.Length == 8)
+                return;
+            for (int i = verification_bits.Length; i < 8; i++)
+                verification_bits = "0" + verification_bits; 
+        }
+
         public override void CodeFrame(Frame frame)
         {
             int aux = 6 + Convert.ToInt32(frame.DataSize, 2);
@@ -44,7 +53,7 @@ namespace Proyect_de_Redes_version_1._0
         public override bool IsCorrect(Frame frame)
         {
             return frame.VerifBits == _ParityCount(frame.CurrentFrame.
-                Substring(0,48 + Convert.ToInt32(frame.DataSize, 2)));
+                Substring(0,48 + Convert.ToInt32(frame.DataSize, 2) * 8));
         }
     }
 }

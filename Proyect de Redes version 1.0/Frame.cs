@@ -12,19 +12,29 @@ namespace Proyect_de_Redes_version_1._0
 
         private int Count { get; set; }
 
-        private string _verifbits;
+        
         public Frame(string frame)
-        private int Count { get; set; }
-        public Frame(string currentFrame)
         {
-            CurrentFrame = "";
+            MacAddressDest = frame.Substring(0, 16);
+            MacAddressOrigin = frame.Substring(16, 16);
+            DataSize = frame.Substring(32, 8);
+            VerifSize = frame.Substring(40, 8);
+            int dBits = Convert.ToInt32(DataSize, 2);
+            databits = dBits * 8;
+            Data = frame.Substring(48, databits);
+            VerifBits = frame.Substring(48 + databits);
         }
         public Frame(string destination, string origin, string data)
         {
             databits = data.Length * 4;
-            string sizeData = GetSize(data);
-            string verifSize = "00000000";
-            CurrentFrame = Tools.HexToBinary(destination + origin) + sizeData + verifSize + Tools.HexToBinary(data);
+            MacAddressDest = Tools.HexToBinary(destination);
+            MacAddressOrigin = Tools.HexToBinary(origin);
+            DataSize = GetSize(data);
+            VerifSize = "00000000";
+            Data = Tools.HexToBinary(data);
+            VerifBits = "";
+            VRC errorV = new VRC();
+            errorV.CodeFrame(this);   
         }
 
         public string GetSize(string data)
@@ -40,12 +50,8 @@ namespace Proyect_de_Redes_version_1._0
             return binBytes;
         }
 
-        public static Frame operator +(Frame frame1, string frame2)
-        {
-            frame1.CurrentFrame += frame2;
-            return frame1;
-        }
-        public string CurrentFrame { get; set; }
+
+        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits; } }
 
         public string MacAddressDest { get; set; }
 
@@ -57,5 +63,6 @@ namespace Proyect_de_Redes_version_1._0
 
         public string Data { get; set; }
 
+        public string VerifBits { get; set; }   
     }
 }

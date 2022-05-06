@@ -42,11 +42,12 @@ namespace Proyect_de_Redes_version_1._0
                     Frame Rframe = new Frame(RecieveFrame);
                     string error = "";
                     VRC verifyError = new VRC();
-                    if (verifyError.IsCorrect(Rframe))
+                    if (!verifyError.IsCorrect(Rframe))
                         error = "ERROR";
                     string hexMacAddress = Tools.BinaryToHex(Rframe.MacAddressOrigin);
                     string hexData = Tools.BinaryToHex(Rframe.Data);
-                    DataTxT.WriteLine(time + " " + hexMacAddress + " " + hexData + " " + error);
+                    string toWrite = time + " " + hexMacAddress + " " + hexData + " " + error;
+                    DataTxT.WriteLine(toWrite.ToUpper());
                     CleanFrames();
                 }
             }
