@@ -36,7 +36,7 @@ namespace Proyect_de_Redes_version_1._0
             }
             else
             {
-                currentHost.WriteTxT(Time, Args[1][currentHost.CurrentBit].ToString(), true, true);
+                currentHost.WriteTxT(new string[] { Time.ToString(), Args[1][currentHost.CurrentBit].ToString() }, true, true);
                 Time += 10;
                 network.PriorityQueue.Insert(this);
             }

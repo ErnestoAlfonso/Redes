@@ -29,7 +29,7 @@ namespace Proyect_de_Redes_version_1._0
             databits = data.Length * 4;
             MacAddressDest = Tools.HexToBinary(destination);
             MacAddressOrigin = Tools.HexToBinary(origin);
-            DataSize = GetSize(data);
+            DataSize = GetSize(ref data);
             VerifSize = "00000000";
             Data = Tools.HexToBinary(data);
             VerifBits = "";
@@ -37,7 +37,7 @@ namespace Proyect_de_Redes_version_1._0
             errorV.CodeFrame(this);   
         }
 
-        public string GetSize(string data)
+        public string GetSize(ref string data)
         {
             int rest = data.Length % 2;
             int bytes = data.Length / 2 + rest;

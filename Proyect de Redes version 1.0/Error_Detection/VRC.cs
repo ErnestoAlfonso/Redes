@@ -15,7 +15,7 @@ namespace Proyect_de_Redes_version_1._0
             for(int i = 0; i < s.Length; i += 8)
             {
                 int parity = s[i];
-                for(int j = 1; j<8; j++)
+                for(int j = 1; j < 8; j++)
                 {
                     parity^=s[i+j];
                 }

@@ -1,0 +1,1127 @@
+20 h1_0 send 1
+20 h1_1 receive 1
+20 h1_2 send 1
+20 h1_3 send 
+30 h1_0 send 0
+30 h1_1 receive 0
+30 h1_2 send 0
+30 h1_3 send 
+40 h1_0 send 1
+40 h1_1 receive 1
+40 h1_2 send 1
+40 h1_3 send 
+50 h1_0 send 0
+50 h1_1 receive 0
+50 h1_2 send 0
+50 h1_3 send 
+60 h1_0 send 0
+60 h1_1 receive 0
+60 h1_2 send 0
+60 h1_3 send 
+70 h1_0 send 1
+70 h1_1 receive 1
+70 h1_2 send 1
+70 h1_3 send 
+80 h1_0 send 0
+80 h1_1 receive 0
+80 h1_2 send 0
+80 h1_3 send 
+90 h1_0 send 0
+90 h1_1 receive 0
+90 h1_2 send 0
+90 h1_3 send 
+100 h1_0 send 1
+100 h1_1 receive 1
+100 h1_2 send 1
+100 h1_3 send 
+110 h1_0 send 0
+110 h1_1 receive 0
+110 h1_2 send 0
+110 h1_3 send 
+120 h1_0 send 1
+120 h1_1 receive 1
+120 h1_2 send 1
+120 h1_3 send 
+130 h1_0 send 1
+130 h1_1 receive 1
+130 h1_2 send 1
+130 h1_3 send 
+140 h1_0 send 0
+140 h1_1 receive 0
+140 h1_2 send 0
+140 h1_3 send 
+150 h1_0 send 1
+150 h1_1 receive 1
+150 h1_2 send 1
+150 h1_3 send 
+160 h1_0 send 1
+160 h1_1 receive 1
+160 h1_2 send 1
+160 h1_3 send 
+170 h1_0 send 1
+170 h1_1 receive 1
+170 h1_2 send 1
+170 h1_3 send 
+180 h1_0 send 1
+180 h1_1 receive 1
+180 h1_2 send 1
+180 h1_3 send 
+190 h1_0 send 0
+190 h1_1 receive 0
+190 h1_2 send 0
+190 h1_3 send 
+200 h1_0 send 1
+200 h1_1 receive 1
+200 h1_2 send 1
+200 h1_3 send 
+210 h1_0 send 0
+210 h1_1 receive 0
+210 h1_2 send 0
+210 h1_3 send 
+220 h1_0 send 0
+220 h1_1 receive 0
+220 h1_2 send 0
+220 h1_3 send 
+230 h1_0 send 1
+230 h1_1 receive 1
+230 h1_2 send 1
+230 h1_3 send 
+240 h1_0 send 0
+240 h1_1 receive 0
+240 h1_2 send 0
+240 h1_3 send 
+250 h1_0 send 0
+250 h1_1 receive 0
+250 h1_2 send 0
+250 h1_3 send 
+260 h1_0 send 1
+260 h1_1 receive 1
+260 h1_2 send 1
+260 h1_3 send 
+270 h1_0 send 0
+270 h1_1 receive 0
+270 h1_2 send 0
+270 h1_3 send 
+280 h1_0 send 1
+280 h1_1 receive 1
+280 h1_2 send 1
+280 h1_3 send 
+290 h1_0 send 1
+290 h1_1 receive 1
+290 h1_2 send 1
+290 h1_3 send 
+300 h1_0 send 0
+300 h1_1 receive 0
+300 h1_2 send 0
+300 h1_3 send 
+310 h1_0 send 1
+310 h1_1 receive 1
+310 h1_2 send 1
+310 h1_3 send 
+320 h1_0 send 1
+320 h1_1 receive 1
+320 h1_2 send 1
+320 h1_3 send 
+330 h1_0 send 0
+330 h1_1 receive 0
+330 h1_2 send 0
+330 h1_3 send 
+340 h1_0 send 0
+340 h1_1 receive 0
+340 h1_2 send 0
+340 h1_3 send 
+350 h1_0 send 0
+350 h1_1 receive 0
+350 h1_2 send 0
+350 h1_3 send 
+360 h1_0 send 0
+360 h1_1 receive 0
+360 h1_2 send 0
+360 h1_3 send 
+370 h1_0 send 0
+370 h1_1 receive 0
+370 h1_2 send 0
+370 h1_3 send 
+380 h1_0 send 0
+380 h1_1 receive 0
+380 h1_2 send 0
+380 h1_3 send 
+390 h1_0 send 0
+390 h1_1 receive 0
+390 h1_2 send 0
+390 h1_3 send 
+400 h1_0 send 1
+400 h1_1 receive 1
+400 h1_2 send 1
+400 h1_3 send 
+410 h1_0 send 1
+410 h1_1 receive 1
+410 h1_2 send 1
+410 h1_3 send 
+420 h1_0 send 0
+420 h1_1 receive 0
+420 h1_2 send 0
+420 h1_3 send 
+430 h1_0 send 0
+430 h1_1 receive 0
+430 h1_2 send 0
+430 h1_3 send 
+440 h1_0 send 0
+440 h1_1 receive 0
+440 h1_2 send 0
+440 h1_3 send 
+450 h1_0 send 0
+450 h1_1 receive 0
+450 h1_2 send 0
+450 h1_3 send 
+460 h1_0 send 1
+460 h1_1 receive 1
+460 h1_2 send 1
+460 h1_3 send 
+470 h1_0 send 0
+470 h1_1 receive 0
+470 h1_2 send 0
+470 h1_3 send 
+480 h1_0 send 0
+480 h1_1 receive 0
+480 h1_2 send 0
+480 h1_3 send 
+490 h1_0 send 1
+490 h1_1 receive 1
+490 h1_2 send 1
+490 h1_3 send 
+500 h1_0 send 1
+500 h1_1 receive 1
+500 h1_2 send 1
+500 h1_3 send 
+510 h1_0 send 0
+510 h1_1 receive 0
+510 h1_2 send 0
+510 h1_3 send 
+520 h1_0 send 1
+520 h1_1 receive 1
+520 h1_2 send 1
+520 h1_3 send 
+530 h1_0 send 1
+530 h1_1 receive 1
+530 h1_2 send 1
+530 h1_3 send 
+540 h1_0 send 0
+540 h1_1 receive 0
+540 h1_2 send 0
+540 h1_3 send 
+550 h1_0 send 0
+550 h1_1 receive 0
+550 h1_2 send 0
+550 h1_3 send 
+560 h1_0 send 0
+560 h1_1 receive 0
+560 h1_2 send 0
+560 h1_3 send 
+570 h1_0 send 1
+570 h1_1 receive 1
+570 h1_2 send 1
+570 h1_3 send 
+580 h1_0 send 1
+580 h1_1 receive 1
+580 h1_2 send 1
+580 h1_3 send 
+590 h1_0 send 1
+590 h1_1 receive 1
+590 h1_2 send 1
+590 h1_3 send 
+600 h1_0 send 1
+600 h1_1 receive 1
+600 h1_2 send 1
+600 h1_3 send 
+610 h1_0 send 1
+610 h1_1 receive 1
+610 h1_2 send 1
+610 h1_3 send 
+620 h1_0 send 0
+620 h1_1 receive 0
+620 h1_2 send 0
+620 h1_3 send 
+630 h1_0 send 0
+630 h1_1 receive 0
+630 h1_2 send 0
+630 h1_3 send 
+640 h1_0 send 1
+640 h1_1 receive 1
+640 h1_2 send 1
+640 h1_3 send 
+650 h1_0 send 1
+650 h1_1 receive 1
+650 h1_2 send 1
+650 h1_3 send 
+660 h1_0 send 1
+660 h1_1 receive 1
+660 h1_2 send 1
+660 h1_3 send 
+670 h1_0 send 1
+670 h1_1 receive 1
+670 h1_2 send 1
+670 h1_3 send 
+680 h1_0 send 0
+680 h1_1 receive 0
+680 h1_2 send 0
+680 h1_3 send 
+690 h1_0 send 0
+690 h1_1 receive 0
+690 h1_2 send 0
+690 h1_3 send 
+700 h1_0 send 0
+700 h1_1 receive 0
+700 h1_2 send 0
+700 h1_3 send 
+710 h1_0 send 1
+710 h1_1 receive 1
+710 h1_2 send 1
+710 h1_3 send 
+720 h1_0 send 0
+720 h1_1 receive 0
+720 h1_2 send 0
+720 h1_3 send 
+730 h1_0 send 1
+730 h1_1 receive 1
+730 h1_2 send 1
+730 h1_3 send 
+740 h1_0 send 1
+740 h1_1 receive 1
+740 h1_2 send 1
+740 h1_3 send 
+750 h1_0 send 0
+750 h1_1 receive 0
+750 h1_2 send 0
+750 h1_3 send 
+760 h1_0 send 1
+760 h1_1 receive 1
+760 h1_2 send 1
+760 h1_3 send 
+770 h1_0 send 1
+770 h1_1 receive 1
+770 h1_2 send 1
+770 h1_3 send 
+780 h1_0 send 0
+780 h1_1 receive 0
+780 h1_2 send 0
+780 h1_3 send 
+790 h1_0 send 0
+790 h1_1 receive 0
+790 h1_2 send 0
+790 h1_3 send 
+800 h1_0 send 0
+800 h1_1 receive 0
+800 h1_2 send 0
+800 h1_3 send 
+810 h1_0 send 0
+810 h1_1 receive 0
+810 h1_2 send 0
+810 h1_3 send 
+820 h1_0 send 0
+820 h1_1 receive 0
+820 h1_2 send 0
+820 h1_3 send 
+820 h1_0 send 0
+820 h1_1 receive 0
+820 h1_2 send 0
+820 h1_3 send 
+830 h1_0 receive 1
+830 h1_1 send 1
+830 h1_2 send 1
+830 h1_3 send 
+840 h1_0 receive 0
+840 h1_1 send 0
+840 h1_2 send 0
+840 h1_3 send 
+850 h1_0 receive 1
+850 h1_1 send 1
+850 h1_2 send 1
+850 h1_3 send 
+860 h1_0 receive 0
+860 h1_1 send 0
+860 h1_2 send 0
+860 h1_3 send 
+870 h1_0 receive 0
+870 h1_1 send 0
+870 h1_2 send 0
+870 h1_3 send 
+880 h1_0 receive 1
+880 h1_1 send 1
+880 h1_2 send 1
+880 h1_3 send 
+890 h1_0 receive 0
+890 h1_1 send 0
+890 h1_2 send 0
+890 h1_3 send 
+900 h1_0 receive 0
+900 h1_1 send 0
+900 h1_2 send 0
+900 h1_3 send 
+910 h1_0 receive 1
+910 h1_1 send 1
+910 h1_2 send 1
+910 h1_3 send 
+920 h1_0 receive 0
+920 h1_1 send 0
+920 h1_2 send 0
+920 h1_3 send 
+930 h1_0 receive 1
+930 h1_1 send 1
+930 h1_2 send 1
+930 h1_3 send 
+940 h1_0 receive 1
+940 h1_1 send 1
+940 h1_2 send 1
+940 h1_3 send 
+950 h1_0 receive 0
+950 h1_1 send 0
+950 h1_2 send 0
+950 h1_3 send 
+960 h1_0 receive 1
+960 h1_1 send 1
+960 h1_2 send 1
+960 h1_3 send 
+970 h1_0 receive 1
+970 h1_1 send 1
+970 h1_2 send 1
+970 h1_3 send 
+980 h1_0 receive 0
+980 h1_1 send 0
+980 h1_2 send 0
+980 h1_3 send 
+990 h1_0 receive 1
+990 h1_1 send 1
+990 h1_2 send 1
+990 h1_3 send 
+1000 h1_0 receive 0
+1000 h1_1 send 0
+1000 h1_2 send 0
+1000 h1_3 send 
+1010 h1_0 receive 1
+1010 h1_1 send 1
+1010 h1_2 send 1
+1010 h1_3 send 
+1020 h1_0 receive 0
+1020 h1_1 send 0
+1020 h1_2 send 0
+1020 h1_3 send 
+1030 h1_0 receive 0
+1030 h1_1 send 0
+1030 h1_2 send 0
+1030 h1_3 send 
+1040 h1_0 receive 1
+1040 h1_1 send 1
+1040 h1_2 send 1
+1040 h1_3 send 
+1050 h1_0 receive 0
+1050 h1_1 send 0
+1050 h1_2 send 0
+1050 h1_3 send 
+1060 h1_0 receive 0
+1060 h1_1 send 0
+1060 h1_2 send 0
+1060 h1_3 send 
+1070 h1_0 receive 1
+1070 h1_1 send 1
+1070 h1_2 send 1
+1070 h1_3 send 
+1080 h1_0 receive 0
+1080 h1_1 send 0
+1080 h1_2 send 0
+1080 h1_3 send 
+1090 h1_0 receive 1
+1090 h1_1 send 1
+1090 h1_2 send 1
+1090 h1_3 send 
+1100 h1_0 receive 1
+1100 h1_1 send 1
+1100 h1_2 send 1
+1100 h1_3 send 
+1110 h1_0 receive 0
+1110 h1_1 send 0
+1110 h1_2 send 0
+1110 h1_3 send 
+1120 h1_0 receive 1
+1120 h1_1 send 1
+1120 h1_2 send 1
+1120 h1_3 send 
+1130 h1_0 receive 0
+1130 h1_1 send 0
+1130 h1_2 send 0
+1130 h1_3 send 
+1140 h1_0 receive 1
+1140 h1_1 send 1
+1140 h1_2 send 1
+1140 h1_3 send 
+1150 h1_0 receive 0
+1150 h1_1 send 0
+1150 h1_2 send 0
+1150 h1_3 send 
+1160 h1_0 receive 0
+1160 h1_1 send 0
+1160 h1_2 send 0
+1160 h1_3 send 
+1170 h1_0 receive 0
+1170 h1_1 send 0
+1170 h1_2 send 0
+1170 h1_3 send 
+1180 h1_0 receive 0
+1180 h1_1 send 0
+1180 h1_2 send 0
+1180 h1_3 send 
+1190 h1_0 receive 0
+1190 h1_1 send 0
+1190 h1_2 send 0
+1190 h1_3 send 
+1200 h1_0 receive 0
+1200 h1_1 send 0
+1200 h1_2 send 0
+1200 h1_3 send 
+1210 h1_0 receive 1
+1210 h1_1 send 1
+1210 h1_2 send 1
+1210 h1_3 send 
+1220 h1_0 receive 1
+1220 h1_1 send 1
+1220 h1_2 send 1
+1220 h1_3 send 
+1230 h1_0 receive 0
+1230 h1_1 send 0
+1230 h1_2 send 0
+1230 h1_3 send 
+1240 h1_0 receive 0
+1240 h1_1 send 0
+1240 h1_2 send 0
+1240 h1_3 send 
+1250 h1_0 receive 0
+1250 h1_1 send 0
+1250 h1_2 send 0
+1250 h1_3 send 
+1260 h1_0 receive 0
+1260 h1_1 send 0
+1260 h1_2 send 0
+1260 h1_3 send 
+1270 h1_0 receive 1
+1270 h1_1 send 1
+1270 h1_2 send 1
+1270 h1_3 send 
+1280 h1_0 receive 0
+1280 h1_1 send 0
+1280 h1_2 send 0
+1280 h1_3 send 
+1290 h1_0 receive 0
+1290 h1_1 send 0
+1290 h1_2 send 0
+1290 h1_3 send 
+1300 h1_0 receive 1
+1300 h1_1 send 1
+1300 h1_2 send 1
+1300 h1_3 send 
+1310 h1_0 receive 1
+1310 h1_1 send 1
+1310 h1_2 send 1
+1310 h1_3 send 
+1320 h1_0 receive 0
+1320 h1_1 send 0
+1320 h1_2 send 0
+1320 h1_3 send 
+1330 h1_0 receive 1
+1330 h1_1 send 1
+1330 h1_2 send 1
+1330 h1_3 send 
+1340 h1_0 receive 0
+1340 h1_1 send 0
+1340 h1_2 send 0
+1340 h1_3 send 
+1350 h1_0 receive 0
+1350 h1_1 send 0
+1350 h1_2 send 0
+1350 h1_3 send 
+1360 h1_0 receive 0
+1360 h1_1 send 0
+1360 h1_2 send 0
+1360 h1_3 send 
+1370 h1_0 receive 1
+1370 h1_1 send 1
+1370 h1_2 send 1
+1370 h1_3 send 
+1380 h1_0 receive 0
+1380 h1_1 send 0
+1380 h1_2 send 0
+1380 h1_3 send 
+1390 h1_0 receive 0
+1390 h1_1 send 0
+1390 h1_2 send 0
+1390 h1_3 send 
+1400 h1_0 receive 0
+1400 h1_1 send 0
+1400 h1_2 send 0
+1400 h1_3 send 
+1410 h1_0 receive 1
+1410 h1_1 send 1
+1410 h1_2 send 1
+1410 h1_3 send 
+1420 h1_0 receive 1
+1420 h1_1 send 1
+1420 h1_2 send 1
+1420 h1_3 send 
+1430 h1_0 receive 1
+1430 h1_1 send 1
+1430 h1_2 send 1
+1430 h1_3 send 
+1440 h1_0 receive 1
+1440 h1_1 send 1
+1440 h1_2 send 1
+1440 h1_3 send 
+1450 h1_0 receive 1
+1450 h1_1 send 1
+1450 h1_2 send 1
+1450 h1_3 send 
+1460 h1_0 receive 0
+1460 h1_1 send 0
+1460 h1_2 send 0
+1460 h1_3 send 
+1470 h1_0 receive 0
+1470 h1_1 send 0
+1470 h1_2 send 0
+1470 h1_3 send 
+1480 h1_0 receive 1
+1480 h1_1 send 1
+1480 h1_2 send 1
+1480 h1_3 send 
+1490 h1_0 receive 0
+1490 h1_1 send 0
+1490 h1_2 send 0
+1490 h1_3 send 
+1500 h1_0 receive 0
+1500 h1_1 send 0
+1500 h1_2 send 0
+1500 h1_3 send 
+1510 h1_0 receive 1
+1510 h1_1 send 1
+1510 h1_2 send 1
+1510 h1_3 send 
+1520 h1_0 receive 1
+1520 h1_1 send 1
+1520 h1_2 send 1
+1520 h1_3 send 
+1530 h1_0 receive 1
+1530 h1_1 send 1
+1530 h1_2 send 1
+1530 h1_3 send 
+1540 h1_0 receive 1
+1540 h1_1 send 1
+1540 h1_2 send 1
+1540 h1_3 send 
+1550 h1_0 receive 1
+1550 h1_1 send 1
+1550 h1_2 send 1
+1550 h1_3 send 
+1560 h1_0 receive 1
+1560 h1_1 send 1
+1560 h1_2 send 1
+1560 h1_3 send 
+1570 h1_0 receive 1
+1570 h1_1 send 1
+1570 h1_2 send 1
+1570 h1_3 send 
+1580 h1_0 receive 1
+1580 h1_1 send 1
+1580 h1_2 send 1
+1580 h1_3 send 
+1590 h1_0 receive 0
+1590 h1_1 send 0
+1590 h1_2 send 0
+1590 h1_3 send 
+1600 h1_0 receive 0
+1600 h1_1 send 0
+1600 h1_2 send 0
+1600 h1_3 send 
+1610 h1_0 receive 1
+1610 h1_1 send 1
+1610 h1_2 send 1
+1610 h1_3 send 
+1620 h1_0 receive 1
+1620 h1_1 send 1
+1620 h1_2 send 1
+1620 h1_3 send 
+1630 h1_0 receive 1
+1630 h1_1 send 1
+1630 h1_2 send 1
+1630 h1_3 send 
+1630 h1_0 receive 1
+1630 h1_1 send 1
+1630 h1_2 send 1
+1630 h1_3 send 
+20 h1_0 receive 1
+20 h1_1 send 1
+20 h1_2 send 0
+20 h1_3 send 
+30 h1_0 send 0
+30 h1_1 receive 0
+30 h1_2 send 0
+30 h1_3 send 
+40 h1_0 receive 1
+40 h1_1 send 1
+40 h1_2 send 0
+40 h1_3 send 
+50 h1_0 send 0
+50 h1_1 receive 0
+50 h1_2 send 0
+50 h1_3 send 
+60 h1_0 receive 0
+60 h1_1 send 0
+60 h1_2 send 0
+60 h1_3 send 
+70 h1_0 send 1
+70 h1_1 receive 1
+70 h1_2 send 0
+70 h1_3 send 
+80 h1_0 receive 0
+80 h1_1 send 0
+80 h1_2 send 0
+80 h1_3 send 
+90 h1_0 send 0
+90 h1_1 receive 0
+90 h1_2 send 0
+90 h1_3 send 
+100 h1_0 receive 1
+100 h1_1 send 1
+100 h1_2 send 0
+100 h1_3 send 
+110 h1_0 send 0
+110 h1_1 receive 0
+110 h1_2 send 0
+110 h1_3 send 
+120 h1_0 receive 1
+120 h1_1 send 1
+120 h1_2 send 0
+120 h1_3 send 
+130 h1_0 send 1
+130 h1_1 receive 1
+130 h1_2 send 0
+130 h1_3 send 
+140 h1_0 receive 0
+140 h1_1 send 0
+140 h1_2 send 0
+140 h1_3 send 
+150 h1_0 send 1
+150 h1_1 receive 1
+150 h1_2 send 0
+150 h1_3 send 
+160 h1_0 receive 1
+160 h1_1 send 1
+160 h1_2 send 0
+160 h1_3 send 
+170 h1_0 send 1
+170 h1_1 receive 1
+170 h1_2 send 1
+170 h1_3 send 
+180 h1_0 receive 1
+180 h1_1 send 1
+180 h1_2 send 0
+180 h1_3 send 
+190 h1_0 send 0
+190 h1_1 receive 0
+190 h1_2 send 0
+190 h1_3 send 
+200 h1_0 receive 1
+200 h1_1 send 1
+200 h1_2 send 0
+200 h1_3 send 
+210 h1_0 send 0
+210 h1_1 receive 0
+210 h1_2 send 0
+210 h1_3 send 
+220 h1_0 receive 0
+220 h1_1 send 0
+220 h1_2 send 0
+220 h1_3 send 
+230 h1_0 send 1
+230 h1_1 receive 1
+230 h1_2 send 0
+230 h1_3 send 
+240 h1_0 receive 0
+240 h1_1 send 0
+240 h1_2 send 0
+240 h1_3 send 
+250 h1_0 send 0
+250 h1_1 receive 0
+250 h1_2 send 0
+250 h1_3 send 
+260 h1_0 receive 1
+260 h1_1 send 1
+260 h1_2 send 0
+260 h1_3 send 
+270 h1_0 send 0
+270 h1_1 receive 0
+270 h1_2 send 0
+270 h1_3 send 
+280 h1_0 receive 1
+280 h1_1 send 1
+280 h1_2 send 0
+280 h1_3 send 
+290 h1_0 send 1
+290 h1_1 receive 1
+290 h1_2 send 0
+290 h1_3 send 
+300 h1_0 receive 0
+300 h1_1 send 0
+300 h1_2 send 0
+300 h1_3 send 
+310 h1_0 send 1
+310 h1_1 receive 1
+310 h1_2 send 0
+310 h1_3 send 
+320 h1_0 receive 0
+320 h1_1 send 0
+320 h1_2 send 1
+320 h1_3 send 
+330 h1_0 send 0
+330 h1_1 receive 0
+330 h1_2 send 1
+330 h1_3 send 
+340 h1_0 receive 0
+340 h1_1 send 0
+340 h1_2 send 0
+340 h1_3 send 
+350 h1_0 send 0
+350 h1_1 receive 0
+350 h1_2 send 0
+350 h1_3 send 
+360 h1_0 receive 0
+360 h1_1 send 0
+360 h1_2 send 0
+360 h1_3 send 
+370 h1_0 send 0
+370 h1_1 receive 0
+370 h1_2 send 0
+370 h1_3 send 
+380 h1_0 receive 0
+380 h1_1 send 0
+380 h1_2 send 0
+380 h1_3 send 
+390 h1_0 send 0
+390 h1_1 receive 0
+390 h1_2 send 0
+390 h1_3 send 
+400 h1_0 receive 1
+400 h1_1 send 1
+400 h1_2 send 0
+400 h1_3 send 
+410 h1_0 send 1
+410 h1_1 receive 1
+410 h1_2 send 0
+410 h1_3 send 
+420 h1_0 receive 0
+420 h1_1 send 0
+420 h1_2 send 0
+420 h1_3 send 
+430 h1_0 send 0
+430 h1_1 receive 0
+430 h1_2 send 0
+430 h1_3 send 
+440 h1_0 receive 0
+440 h1_1 send 0
+440 h1_2 send 0
+440 h1_3 send 
+450 h1_0 send 0
+450 h1_1 receive 0
+450 h1_2 send 0
+450 h1_3 send 
+460 h1_0 receive 1
+460 h1_1 send 1
+460 h1_2 send 0
+460 h1_3 send 
+470 h1_0 send 0
+470 h1_1 receive 0
+470 h1_2 send 0
+470 h1_3 send 
+480 h1_0 receive 0
+480 h1_1 send 0
+480 h1_2 send 0
+480 h1_3 send 
+490 h1_0 send 1
+490 h1_1 receive 1
+490 h1_2 send 0
+490 h1_3 send 
+500 h1_0 receive 1
+500 h1_1 send 1
+500 h1_2 send 0
+500 h1_3 send 
+510 h1_0 send 0
+510 h1_1 receive 0
+510 h1_2 send 0
+510 h1_3 send 
+520 h1_0 receive 1
+520 h1_1 send 1
+520 h1_2 send 0
+520 h1_3 send 
+530 h1_0 send 1
+530 h1_1 receive 1
+530 h1_2 send 1
+530 h1_3 send 
+540 h1_0 receive 0
+540 h1_1 send 0
+540 h1_2 send 0
+540 h1_3 send 
+550 h1_0 send 0
+550 h1_1 receive 0
+550 h1_2 send 0
+550 h1_3 send 
+560 h1_0 receive 1
+560 h1_1 send 1
+560 h1_2 send 1
+560 h1_3 send 
+570 h1_0 send 1
+570 h1_1 receive 1
+570 h1_2 send 1
+570 h1_3 send 
+580 h1_0 receive 0
+580 h1_1 send 0
+580 h1_2 send 1
+580 h1_3 send 
+590 h1_0 send 1
+590 h1_1 receive 1
+590 h1_2 send 1
+590 h1_3 send 
+600 h1_0 receive 1
+600 h1_1 send 1
+600 h1_2 send 0
+600 h1_3 send 20 h1_0 receive 1
+20 h1_1 send 1
+20 h1_2 send 0
+20 h1_3 send 
+30 h1_0 send 0
+30 h1_1 receive 0
+30 h1_2 send 0
+30 h1_3 send 
+40 h1_0 receive 1
+40 h1_1 send 1
+40 h1_2 send 0
+40 h1_3 send 
+50 h1_0 send 0
+50 h1_1 receive 0
+50 h1_2 send 0
+50 h1_3 send 
+60 h1_0 receive 0
+60 h1_1 send 0
+60 h1_2 send 0
+60 h1_3 send 
+70 h1_0 send 1
+70 h1_1 receive 1
+70 h1_2 send 0
+70 h1_3 send 
+80 h1_0 receive 0
+80 h1_1 send 0
+80 h1_2 send 0
+80 h1_3 send 
+90 h1_0 send 0
+90 h1_1 receive 0
+90 h1_2 send 0
+90 h1_3 send 
+100 h1_0 receive 1
+100 h1_1 send 1
+100 h1_2 send 0
+100 h1_3 send 
+110 h1_0 send 0
+110 h1_1 receive 0
+110 h1_2 send 0
+110 h1_3 send 
+120 h1_0 receive 1
+120 h1_1 send 1
+120 h1_2 send 0
+120 h1_3 send 
+130 h1_0 send 1
+130 h1_1 receive 1
+130 h1_2 send 0
+130 h1_3 send 
+140 h1_0 receive 0
+140 h1_1 send 0
+140 h1_2 send 0
+140 h1_3 send 
+150 h1_0 send 1
+150 h1_1 receive 1
+150 h1_2 send 0
+150 h1_3 send 
+160 h1_0 receive 1
+160 h1_1 send 1
+160 h1_2 send 0
+160 h1_3 send 
+170 h1_0 send 1
+170 h1_1 receive 1
+170 h1_2 send 1
+170 h1_3 send 
+180 h1_0 receive 1
+180 h1_1 send 1
+180 h1_2 send 0
+180 h1_3 send 
+190 h1_0 send 0
+190 h1_1 receive 0
+190 h1_2 send 0
+190 h1_3 send 
+200 h1_0 receive 1
+200 h1_1 send 1
+200 h1_2 send 0
+200 h1_3 send 
+210 h1_0 send 0
+210 h1_1 receive 0
+210 h1_2 send 0
+210 h1_3 send 
+220 h1_0 receive 0
+220 h1_1 send 0
+220 h1_2 send 0
+220 h1_3 send 
+230 h1_0 send 1
+230 h1_1 receive 1
+230 h1_2 send 0
+230 h1_3 send 
+240 h1_0 receive 0
+240 h1_1 send 0
+240 h1_2 send 0
+240 h1_3 send 
+250 h1_0 send 0
+250 h1_1 receive 0
+250 h1_2 send 0
+250 h1_3 send 
+260 h1_0 receive 1
+260 h1_1 send 1
+260 h1_2 send 0
+260 h1_3 send 
+270 h1_0 send 0
+270 h1_1 receive 0
+270 h1_2 send 0
+270 h1_3 send 
+280 h1_0 receive 1
+280 h1_1 send 1
+280 h1_2 send 0
+280 h1_3 send 
+290 h1_0 send 1
+290 h1_1 receive 1
+290 h1_2 send 0
+290 h1_3 send 
+300 h1_0 receive 0
+300 h1_1 send 0
+300 h1_2 send 0
+300 h1_3 send 
+310 h1_0 send 1
+310 h1_1 receive 1
+310 h1_2 send 0
+310 h1_3 send 
+320 h1_0 receive 0
+320 h1_1 send 0
+320 h1_2 send 1
+320 h1_3 send 
+330 h1_0 send 0
+330 h1_1 receive 0
+330 h1_2 send 1
+330 h1_3 send 
+340 h1_0 receive 0
+340 h1_1 send 0
+340 h1_2 send 0
+340 h1_3 send 
+350 h1_0 send 0
+350 h1_1 receive 0
+350 h1_2 send 0
+350 h1_3 send 
+360 h1_0 receive 0
+360 h1_1 send 0
+360 h1_2 send 0
+360 h1_3 send 
+370 h1_0 send 0
+370 h1_1 receive 0
+370 h1_2 send 0
+370 h1_3 send 
+380 h1_0 receive 0
+380 h1_1 send 0
+380 h1_2 send 0
+380 h1_3 send 
+390 h1_0 send 0
+390 h1_1 receive 0
+390 h1_2 send 0
+390 h1_3 send 
+400 h1_0 receive 1
+400 h1_1 send 1
+400 h1_2 send 0
+400 h1_3 send 
+410 h1_0 send 1
+410 h1_1 receive 1
+410 h1_2 send 0
+410 h1_3 send 
+420 h1_0 receive 0
+420 h1_1 send 0
+420 h1_2 send 0
+420 h1_3 send 
+430 h1_0 send 0
+430 h1_1 receive 0
+430 h1_2 send 0
+430 h1_3 send 
+440 h1_0 receive 0
+440 h1_1 send 0
+440 h1_2 send 0
+440 h1_3 send 
+450 h1_0 send 0
+450 h1_1 receive 0
+450 h1_2 send 0
+450 h1_3 send 
+460 h1_0 receive 1
+460 h1_1 send 1
+460 h1_2 send 0
+460 h1_3 send 
+470 h1_0 send 0
+470 h1_1 receive 0
+470 h1_2 send 0
+470 h1_3 send 
+480 h1_0 receive 0
+480 h1_1 send 0
+480 h1_2 send 0
+480 h1_3 send 
+490 h1_0 send 1
+490 h1_1 receive 1
+490 h1_2 send 0
+490 h1_3 send 
+500 h1_0 receive 1
+500 h1_1 send 1
+500 h1_2 send 0
+500 h1_3 send 
+510 h1_0 send 0
+510 h1_1 receive 0
+510 h1_2 send 0
+510 h1_3 send 
+520 h1_0 receive 1
+520 h1_1 send 1
+520 h1_2 send 0
+520 h1_3 send 
+530 h1_0 send 1
+530 h1_1 receive 1
+530 h1_2 send 1
+530 h1_3 send 
+540 h1_0 receive 0
+540 h1_1 send 0
+540 h1_2 send 0
+540 h1_3 send 
+550 h1_0 send 0
+550 h1_1 receive 0
+550 h1_2 send 0
+550 h1_3 send 
+560 h1_0 receive 1
+560 h1_1 send 1
+560 h1_2 send 1
+560 h1_3 send 
+570 h1_0 send 1
+570 h1_1 receive 1
+570 h1_2 send 1
+570 h1_3 send 
+580 h1_0 receive 0
+580 h1_1 send 0
+580 h1_2 send 1
+580 h1_3 send 
+590 h1_0 send 1
+590 h1_1 receive 1
+590 h1_2 send 1
+590 h1_3 send 
+600 h1_0 receive 1
+600 h1_1 send 1
+600 h1_2 send 0
+600 h1_3 send 
