@@ -8,7 +8,7 @@ namespace Proyect_de_Redes_version_1._0
 {
     public class Mac_Inst : Instruction
     {
-        public Mac_Inst(int time, string[] args, int priority) : base(time, args, 2)
+        public Mac_Inst(int time, string[] args) : base(time, args, 2)
         {
         }
 

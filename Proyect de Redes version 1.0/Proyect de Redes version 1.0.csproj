@@ -66,6 +66,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Instruction\Send_Inst.cs" />
     <Compile Include="Device\Wire.cs" />
+    <Compile Include="Instruction\Send_frame_Inst.cs" />
     <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
