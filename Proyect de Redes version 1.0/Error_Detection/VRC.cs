@@ -28,11 +28,12 @@ namespace Proyect_de_Redes_version_1._0
         {
             int aux = 6 + Convert.ToInt32(frame.DataSize, 2);
             string bytes = Convert.
-                ToString(6 + Convert.ToInt32(frame.DataSize,2)/8, 2);
+                ToString(aux, 2);
+            
             for (int i = bytes.Length; i < 8; i++)
                 bytes = "0" + bytes;
+            
             frame.VerifSize = bytes;
-
             frame.VerifBits = _ParityCount(frame.CurrentFrame);
         }
 
@@ -40,11 +41,10 @@ namespace Proyect_de_Redes_version_1._0
         {
             return frame.VerifBits;
         }
-
         public override bool IsCorrect(Frame frame)
         {
             return frame.VerifBits == _ParityCount(frame.CurrentFrame.
-                Substring(0,48+ Convert.ToInt32(frame.DataSize, 2)));
+                Substring(0,48 + Convert.ToInt32(frame.DataSize, 2)));
         }
     }
 }
