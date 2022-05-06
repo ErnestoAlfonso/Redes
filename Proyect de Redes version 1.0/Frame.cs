@@ -9,11 +9,12 @@ namespace Proyect_de_Redes_version_1._0
     public class Frame
     {
         private int databits;
+        private string _verifbits;
+        public Frame(string frame)
         private int Count { get; set; }
         public Frame(string currentFrame)
         {
-            CurrentFrame = currentFrame;
-            Count = 0;
+            CurrentFrame = "";
         }
         public Frame(string destination, string origin, string data)
         {
@@ -21,9 +22,9 @@ namespace Proyect_de_Redes_version_1._0
             string sizeData = GetSize(data);
             string verifSize = "00000000";
             CurrentFrame = Tools.HexToBinary(destination + origin) + sizeData + verifSize + Tools.HexToBinary(data);
-            Count = 0;
         }
-        private string GetSize(string data)
+
+        public string GetSize(string data)
         {
             int rest = data.Length % 2;
             int bytes = data.Length / 2 + rest;
@@ -35,23 +36,23 @@ namespace Proyect_de_Redes_version_1._0
                 data = "0" + data;
             return binBytes;
         }
-        public string NextBit()
-        {
-            string bit = CurrentFrame[Count].ToString();
-            Count++;
-            return bit;
-        }
+
         public static Frame operator +(Frame frame1, string frame2)
         {
             frame1.CurrentFrame += frame2;
             return frame1;
         }
-
         public string CurrentFrame { get; set; }
+
         public string MacAddressDest { get { return CurrentFrame.Substring(0, 16); } }
+
         public string MacAddressOrigin { get { return CurrentFrame.Substring(16, 16); } }
+
         public string SizeData { get { return CurrentFrame.Substring(32, 8); } }
+
         public string VerifSize { get { return CurrentFrame.Substring(40, 8); } }
+
         public string Data { get { return CurrentFrame.Substring(48, databits); } }
+
     }
 }
