@@ -20,7 +20,7 @@ namespace Proyect_de_Redes_version_1._0
             CurrentFrame = Tools.HexToBinary(destination + origin + data);
         }
 
-        private string GetSize(string data)
+        public string GetSize(string data)
         {
             int rest = data.Length % 2;
             int bytes = data.Length / 2 + rest;

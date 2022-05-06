@@ -67,6 +67,8 @@
     <Compile Include="Instruction\Send_Inst.cs" />
     <Compile Include="Device\Wire.cs" />
     <Compile Include="Tools.cs" />
+    <Compile Include="Error_Detection\Error_Detection.cs" />
+    <Compile Include="Error_Detection\VRC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
