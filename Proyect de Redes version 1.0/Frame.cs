@@ -14,28 +14,17 @@ namespace Proyect_de_Redes_version_1._0
 
         private string _verifbits;
         public Frame(string frame)
+        private int Count { get; set; }
+        public Frame(string currentFrame)
         {
-            MacAddressDest = frame.Substring(0, 16);
-            MacAddressOrigin = frame.Substring(16, 16);
-            DataSize = frame.Substring(32, 8);
-            VerifSize = frame.Substring(40, 8);
-            int dataBytes = Convert.ToInt32(DataSize, 2);
-            databits = dataBytes * 8;
-            Data = frame.Substring(48, databits);
-            VerifBits = frame.Substring(48 + databits);
-
+            CurrentFrame = "";
         }
         public Frame(string destination, string origin, string data)
         {
             databits = data.Length * 4;
-            Count = 0;
-
-            MacAddressDest = Tools.HexToBinary(destination);
-            MacAddressOrigin = Tools.HexToBinary(origin);
-            DataSize = GetSize(data);
-            Data = Tools.HexToBinary(data);
-            VerifSize = "00000000";
-            _verifbits = "";
+            string sizeData = GetSize(data);
+            string verifSize = "00000000";
+            CurrentFrame = Tools.HexToBinary(destination + origin) + sizeData + verifSize + Tools.HexToBinary(data);
         }
 
         public string GetSize(string data)
@@ -51,14 +40,12 @@ namespace Proyect_de_Redes_version_1._0
             return binBytes;
         }
 
-        public string NextBit()
+        public static Frame operator +(Frame frame1, string frame2)
         {
-            string bit = CurrentFrame[Count].ToString();
-            Count++;
-            return bit;
+            frame1.CurrentFrame += frame2;
+            return frame1;
         }
-
-        public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits; } }
+        public string CurrentFrame { get; set; }
 
         public string MacAddressDest { get; set; }
 
@@ -70,14 +57,5 @@ namespace Proyect_de_Redes_version_1._0
 
         public string Data { get; set; }
 
-        public string VerifBits {
-            get => _verifbits;
-            set { 
-                _verifbits = value;
-                string bytes = Convert.ToString(_verifbits.Length, 2);
-                for (int i = bytes.Length; i < 8; i++)
-                    bytes = "0" + bytes;
-            } 
-        }
     }
 }

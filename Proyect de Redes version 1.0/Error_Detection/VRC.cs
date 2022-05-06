@@ -12,7 +12,7 @@ namespace Proyect_de_Redes_version_1._0
         {
             string verification_bits = "";
 
-            for(int i = 0; i < s.Length-8; i += 8)
+            for(int i = 0; i < s.Length; i += 8)
             {
                 int parity = s[i];
                 for(int j = 1; j<8; j++)
@@ -26,9 +26,9 @@ namespace Proyect_de_Redes_version_1._0
         }
         public override void CodeFrame(Frame frame)
         {
-            
+            int aux = 6 + Convert.ToInt32(frame.DataSize, 2);
             string bytes = Convert.
-                ToString(6 + Convert.ToInt64(frame.DataSize,2)/8, 2);
+                ToString(6 + Convert.ToInt32(frame.DataSize,2)/8, 2);
             for (int i = bytes.Length; i < 8; i++)
                 bytes = "0" + bytes;
             frame.VerifSize = bytes;
@@ -44,7 +44,7 @@ namespace Proyect_de_Redes_version_1._0
         public override bool IsCorrect(Frame frame)
         {
             return frame.VerifBits == _ParityCount(frame.CurrentFrame.
-                Substring(0,48 + Convert.ToInt32(frame.DataSize, 2)));
+                Substring(0,48+ Convert.ToInt32(frame.DataSize, 2)));
         }
     }
 }

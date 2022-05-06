@@ -12,7 +12,7 @@ namespace Proyect_de_Redes_version_1._0
         public static string HexToBinary(string hexValue)
         {
             string binValue = "";
-            binValue = Convert.ToString(Convert.ToInt64(hexValue, 16), 2);
+            binValue = Convert.ToString(Convert.ToInt32(hexValue, 16), 2);
             return binValue;
         }
         public static string BinaryToHex(string binValue)

@@ -5,6 +5,11 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyect de Redes version 1.0", "Proyect de Redes version 1.0\Proyect de Redes version 1.0.csproj", "{DC8619E7-369D-40B0-B7F1-44609E8C4AF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{B99008FC-56B7-4C31-8EB9-1E6BABF7B348}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DC8619E7-369D-40B0-B7F1-44609E8C4AF5} = {DC8619E7-369D-40B0-B7F1-44609E8C4AF5}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{DC8619E7-369D-40B0-B7F1-44609E8C4AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC8619E7-369D-40B0-B7F1-44609E8C4AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC8619E7-369D-40B0-B7F1-44609E8C4AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99008FC-56B7-4C31-8EB9-1E6BABF7B348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99008FC-56B7-4C31-8EB9-1E6BABF7B348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99008FC-56B7-4C31-8EB9-1E6BABF7B348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99008FC-56B7-4C31-8EB9-1E6BABF7B348}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
