@@ -17,8 +17,8 @@ namespace Proyect_de_Redes_version_1._0
         public int CountTime { get; set; }
         public int CurrentBit { get; set; }
         public bool IsSending { get; set; }
-
         public string MacAddress { get; set; }
+        public string FrameToSend { get; set; }
 
 
         public void Send(string info, int time)

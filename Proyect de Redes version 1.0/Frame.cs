@@ -11,7 +11,7 @@ namespace Proyect_de_Redes_version_1._0
         private int databits;
         private string _verifbits;
         public Frame(string frame)
-        {
+        { 
             MacAddressDest = frame.Substring(0, 16);
             MacAddressOrigin = frame.Substring(16, 16);
             DataSize = frame.Substring(32, 8);
@@ -19,7 +19,6 @@ namespace Proyect_de_Redes_version_1._0
             Data = frame.Substring(48, databits);
             VerifBits = frame.Substring(48 + databits);
         }
-
         public Frame(string destination, string origin, string data)
         {
             databits = data.Length * 4;
@@ -61,14 +60,16 @@ namespace Proyect_de_Redes_version_1._0
 
         public string Data { get; set; }
 
-        public string VerifBits {
+        public string VerifBits
+        {
             get => _verifbits;
-            set { 
+            set
+            {
                 _verifbits = value;
                 string bytes = Convert.ToString(_verifbits.Length, 2);
                 for (int i = bytes.Length; i < 8; i++)
                     bytes = "0" + bytes;
-            } 
+            }
         }
     }
 }

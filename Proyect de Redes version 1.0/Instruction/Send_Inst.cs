@@ -9,7 +9,7 @@ namespace Proyect_de_Redes_version_1._0
 {
     public class Send_Inst : Instruction
     {
-        public Send_Inst(int time, string[] args) : base(time, args, 40)
+        public Send_Inst(int time, string[] args) : base(time, args, 2050)
         {
         }
 
