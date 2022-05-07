@@ -13,12 +13,11 @@ namespace Proyect_de_Redes_version_1._0
         public NetWork()
         {
             NameLogicDevice = new Dictionary<string, LogicDevice>();
+            Switches = new List<Switch>();
         }
         public Heap<Instruction> PriorityQueue { get; set; }
         public Dictionary<string, LogicDevice> NameLogicDevice { get; set; }
         public int SendTime { get; set; }   
-    
-      
-
+        public List<Switch> Switches { get; set; }
     }
 }

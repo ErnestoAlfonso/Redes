@@ -18,7 +18,7 @@ namespace Proyect_de_Redes_version_1._0
         public int Time { get; private set; }
         public void Manage()
         {
-            _NetWork.PriorityQueue = Parser.ReadFile(new System.IO.StreamReader("D:\\Universidad\\Tercer año\\Primer semestre\\Redes\\Proyecto de Redes\\Redes\\Scripts.txt"));
+            _NetWork.PriorityQueue = Parser.ReadFile(new System.IO.StreamReader("D:\\Cibernética\\!!!!Tercer año\\Proyecto de Redes\\Redes 2.0\\Scripts.txt"));
             bool end = false;
             while (!end)
             {
@@ -30,11 +30,32 @@ namespace Proyect_de_Redes_version_1._0
                 Time++;
                 if (_NetWork.PriorityQueue.Size == 0)
                 {
+
+                    foreach (var item in _NetWork.Switches)
+                    {
+                        bool endF = false;
+                        if (item.FramesToSend.Count > 0)
+                        {
+                            item.ActualFrame = item.FramesToSend.Peek();
+                        }
+                        while (item.ActualFrame != null)
+                        {
+                            item.Send(item.ActualFrame.NextBit(ref endF), Time, endF);
+                            if (endF)
+                            {
+                                item.FramesToSend.Dequeue();
+                                if (item.FramesToSend.Count > 0)
+                                    item.ActualFrame = item.FramesToSend.Peek();
+                                else item.ActualFrame = null;
+                            }
+                            Time += 10;
+                        }
+                    }
                     end = true;
                     foreach (var item in _NetWork.NameLogicDevice.Values)
                     {
                         item.TxT.Close();
-                        if(item is Host)
+                        if (item is Host)
                         {
                             Host aux = (Host)item;
                             aux.DataTxT.Close();

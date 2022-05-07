@@ -8,7 +8,7 @@ namespace Proyect_de_Redes_version_1._0
 {
     public static class Tools
     {
-        public const string root = @"D:\Universidad\Tercer año\Primer semestre\Redes\Proyecto de Redes\Redes\solutionsTxt\";
+        public const string root = "D:\\Cibernética\\!!!!Tercer año\\Proyecto de Redes\\Redes 2.0\\solutionsTxt\\";
         public static string HexToBinary(string hexValue)
         {
             string binValue = "";

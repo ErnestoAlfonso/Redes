@@ -25,6 +25,13 @@ namespace Proyect_de_Redes_version_1._0
                 Hub hub = new Hub(Args[1], int.Parse(Args[2]));
                 network.NameLogicDevice.Add(Args[1], hub);
             }
+            if (Args[0] == "switch")
+            {
+                Switch _switch = new Switch(Args[1], int.Parse(Args[2]));
+                network.NameLogicDevice.Add(Args[1], _switch);
+                network.Switches.Add(_switch);
+            }
+
         }
     }
 }

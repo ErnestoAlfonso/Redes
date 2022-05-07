@@ -12,7 +12,7 @@ namespace Proyect_de_Redes_version_1._0
 
         private int Count { get; set; }
 
-        
+
         public Frame(string frame)
         {
             MacAddressDest = frame.Substring(0, 16);
@@ -23,6 +23,7 @@ namespace Proyect_de_Redes_version_1._0
             databits = dBits * 8;
             Data = frame.Substring(48, databits);
             VerifBits = frame.Substring(48 + databits);
+            Count = 0;
         }
         public Frame(string destination, string origin, string data)
         {
@@ -34,7 +35,8 @@ namespace Proyect_de_Redes_version_1._0
             Data = Tools.HexToBinary(data);
             VerifBits = "";
             VRC errorV = new VRC();
-            errorV.CodeFrame(this);   
+            errorV.CodeFrame(this);
+            Count = 0;
         }
 
         public string GetSize(ref string data)
@@ -44,13 +46,26 @@ namespace Proyect_de_Redes_version_1._0
             string binBytes = Convert.ToString(bytes, 2);
             for (int i = binBytes.Length; i < 8; i++)
                 binBytes = "0" + binBytes;
-            
+
             if (rest > 0)
                 data = "0" + data;
             return binBytes;
         }
 
-
+        public string NextBit(ref bool end)
+        {
+            if (Count == CurrentFrame.Length - 1)
+            {
+                end = true;
+            }
+            else
+            {
+                end = false;
+            }
+            string bit = CurrentFrame[Count].ToString();
+            Count++;
+            return bit;
+        }
         public string CurrentFrame { get { return MacAddressDest + MacAddressOrigin + DataSize + VerifSize + Data + VerifBits; } }
 
         public string MacAddressDest { get; set; }
@@ -63,6 +78,6 @@ namespace Proyect_de_Redes_version_1._0
 
         public string Data { get; set; }
 
-        public string VerifBits { get; set; }   
+        public string VerifBits { get; set; }
     }
 }

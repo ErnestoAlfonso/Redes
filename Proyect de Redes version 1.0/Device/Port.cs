@@ -47,10 +47,15 @@ namespace Proyect_de_Redes_version_1._0
                 Host hostR = (Host)portR.Owner;
                 hostR.Receive(portR, time, end);
             }
-            else
+            else if(portR.Owner is Hub) 
             {
                 Hub hubR = (Hub)portR.Owner;
                 hubR.Receive(portR, time, end);
+            }
+            else
+            {
+                Switch _switch = (Switch)portR.Owner;
+                _switch.Receive(portR, time, end);
             }
         }
     }
